@@ -4,7 +4,7 @@
     #include <freertos/task.h>
     #include "freertos/queue.h"
     /* Wifi Credentials */
-    #define WIFI_SSID ""
+    #define WIFI_SSID "Tuty"
     #define WIFI_PWD ""
 
     /* MQTT Credentials */
