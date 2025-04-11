@@ -53,7 +53,7 @@ The firmware uses FreeRTOS and relies on:
 The architecture includes dedicated tasks for input control, display output, MQTT packet handling, timing, and signaling.
 
 <p align="center">
-  <img src="images/control_painel_architecture.png" alt="Firmware Architecture" width="400"/>
+  <img src="Control_Panel/images/control_painel_architecture.png" alt="Firmware Architecture" width="400"/>
 </p>
 ---
 
@@ -86,7 +86,7 @@ The architecture includes dedicated tasks for input control, display output, MQT
 The control panel prototype was assembled on a protoboard with all peripherals integrated and tested.
 
 <p align="center">
-  <img src="images/prototype_v1.0.jpeg" alt="Control Panel Prototype" width="400"/>
+  <img src="Control_Panel/images/prototype_v1.0.jpeg" alt="Control Panel Prototype" width="400"/>
 </p>
 ---
 
