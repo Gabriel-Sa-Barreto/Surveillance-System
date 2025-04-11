@@ -1,0 +1,3 @@
+[submodule "Control_Panel/components/esp_littlefs"]
+	path = Control_Panel/components/esp_littlefs
+	url = https://github.com/joltwallet/esp_littlefs.git

@@ -1,496 +1,91 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include <string.h>
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
-#include <freertos/event_groups.h>
-#include "freertos/queue.h"
+#include "freertos/semphr.h"
 #include "esp_system.h"
 #include "esp_timer.h"
+#include "esp_log.h"
 #include "spi_flash_mmap.h"
 #include "nvs_flash.h"
 #include "driver/gpio.h"
-#include "esp_log.h"
-#include "connect.h"
-#include "headers/MQTT.h"
-#include "headers/general.h"
+#include "../components/wifi/connect.h"
 #include "headers/buttons.h"
-#include "headers/display.h"
+#include "headers/m_key.h"
+#include "headers/displayOled.h"
+#include "headers/displayOled_controller.h"
+#include "headers/project_Timers.h"
+#include "headers/MQTT.h"
+#include "headers/packageProcessor.h"
+#include "headers/general.h"
+#include "headers/fileSystem.h"
+enum states
+{
+	STATE_INITIAL_SCREEN,
+	STATE_EN_SYSTEM,
+	STATE_DIS_SYSTEM,
+	STATE_CAMERAS_MODE,
+	STATE_PROCESS_ALERT,
+	STATE_VALIDATE_PWD,
+	STATE_PROCESS_OPERATION,
+	STATE_REFRESH_PWD,
+	STATE_OPERATION_SUCCESS,
+	STATE_OPERATION_FAILURE
+};
 
-/* Variable that inform whether the system is activated */
-bool isActivated_system;
+enum initial_screen_menu_option
+{
+	OPTION_ENABLE_SYSTEM,
+	OPTION_DISABLE_SYSTEM,
+	OPTION_CAM_MODE
+};
+
+enum cam_mode_option
+{
+	OPTION_CONTINUOUS_MODE,
+	OPTION_PERSONALIZED_MODE,
+	OPTION_TO_BACK,
+};
+
+enum confirmationOptions
+{	
+	OPTION_YES,
+	OPTION_NO
+};
+
+enum opcode_actions
+{
+	OP_EN_SYSTEM,  /* ENABLE SYTEM      */
+	OP_DIS_SYSTEM, /* DISABLE SYSTEM    */
+	OP_CONT_MODE,  /* CONTINUOUS MODE   */
+	OP_PERS_MODE,  /* PERSONALIZED MODE */
+	OP_REF_PWD,    /* REFRESH PASSWORD  */
+	OP_DIS_ALERT   /* DISABLE ALERT     */
+};
+
+/* Prototypes of the functions */
+void    main_task(void *args);
+void    sendCommand_to_refreshScreen(uint8_t buttonPressed, uint8_t screens_ID);
+uint8_t getButtonPressed();
+bool    validatePassword(char *password);
+bool    process_current_operation(uint8_t action);
 
 /* Handler Variables */
-QueueHandle_t      QueueBT;
-QueueHandle_t      alertQueue;
-esp_timer_handle_t xTimerHandler;
-esp_timer_handle_t xTimerAlertLedHandler;
-TaskHandle_t       mainTaskHandler;
-
-uint8_t wifiLogo[] = {
-    0b00000000, 0b00001110,
-    0b00000000, 0b00001110,
-    0b00000000, 0b11101110,
-    0b00000000, 0b11101110,
-    0b00001110, 0b11101110,
-    0b00001110, 0b11101110,
-    0b11101110, 0b11101110,
-    0b11101110, 0b11101110
-};
-uint8_t wifi_failed[] = {
-    0b10001000, 0b00001110,
-    0b01010000, 0b00001010,
-    0b00100000, 0b11101010,
-    0b10010000, 0b10101010,
-    0b00001110, 0b10101010,
-    0b00001010, 0b10101010,
-    0b11101010, 0b10101010,
-    0b10101010, 0b10101010
-};
-uint8_t mqtt_symbol[] = {
-    0b00000000, 0b00000000,
-    0b00000000, 0b00000000,
-    0b01111111, 0b11111110,
-    0b01000000, 0b10101010,
-    0b01000000, 0b00000010,
-    0b01111111, 0b11111110,
-    0b00011000, 0b00011000,
-    0b00011000, 0b00011000
-};
-uint8_t mqtt_failed[] = {
-    0b00001000, 0b00010000,
-    0b00000100, 0b00100000,
-    0b01111111, 0b11111110,
-    0b01000001, 0b10101010,
-    0b01000001, 0b10000010,
-    0b01111111, 0b11111110,
-    0b00000100, 0b00100000,
-    0b00001000, 0b00010000
-};
-
-enum screen_state
-{
-    STATE_INITIAL_SCREEN,
-    STATE_RENDERING_SCREEN,
-    STATE_ENABLE_SYSTEM,
-    STATE_DISABLE_SYSTEM,
-    STATE_CAMERAS_MODE,
-    STATE_CHECK_ALERT,
-    STATE_PROCESS_ALERT
-};
-
-/* Prototype of the Functions */
-void initTimers();
-void initTimer_to_connectionStatus();
-void alertSignal();
-void info_systemConnectionStatus(void* arg);
-
-void initTimers()
-{
-	const esp_timer_create_args_t periodic_timer_args = {
-            .callback = &info_systemConnectionStatus,
-            /* name is optional, but may help identify the timer when debugging */
-            .name = TIMER_STATUS_TAG
-    };
-
-	ESP_ERROR_CHECK(esp_timer_create(&periodic_timer_args, &xTimerHandler));
-	/* The timer has been created but is not running yet */
-	
-	/* Start the timers */
-    ESP_ERROR_CHECK(esp_timer_start_periodic(xTimerHandler, 10000000));
-	ESP_LOGI(TIMER_STATUS_TAG, "Status Timer started, time since boot: %lld us", esp_timer_get_time());
-}
-
-void initTimerAlertLed()
-{
-	const esp_timer_create_args_t periodic_timer_args = {
-            .callback = &alertSignal,
-            /* name is optional, but may help identify the timer when debugging */
-            .name = TIMER_ALERT_TAG
-    };
-
-	ESP_ERROR_CHECK(esp_timer_create(&periodic_timer_args, &xTimerAlertLedHandler));
-	/* The timer has been created but is not running yet */
-	
-	/* Start the timers */
-    ESP_ERROR_CHECK(esp_timer_start_periodic(xTimerAlertLedHandler, 1000000));
-	ESP_LOGI(TIMER_ALERT_TAG, "Alert Timer started, time since boot: %lld us", esp_timer_get_time());	
-}
-
-void alertSignal()
-{
-	static uint32_t statusLed;
-	if(statusLed == 1)
-		statusLed = 0;
-	else
-		statusLed = 1;
-	gpio_set_level(LED_RED_PIN, statusLed);
-}
-
-void info_systemConnectionStatus(void* arg)
-{
-	ESP_LOGI(TIMER_STATUS_TAG, "Checking connection status....");
-	if(wifi_isConnected())
-	{ 
-		printBitmap(0, 0, wifiLogo, 16, 8, false);
-		if(mqtt_connected())
-		{
-			printBitmap((8*3) - 1, 0, mqtt_symbol, 16, 8, false);
-		}else
-		{
-			printBitmap((8*3) - 1, 0, mqtt_failed, 16, 8, false);
-		}
-	}else
-	{
-		printBitmap(0, 0, wifi_failed, 16, 8, false);
-		printBitmap((8*3) - 1, 0, mqtt_failed, 16, 8, false);
-		wifi_connect();
-	}
-}
-
-bool send_msgTo_enableSystem(char *enable)
-{
-	char msg[25];
-	uint32_t response = 0;
-	if(!mqtt_connected())
-	{
-		return false;
-	}
-	strcpy(msg, "{\"enable_system\":");
-	strcat(msg, enable);
-	strcat(msg, "}");
-	mqtt_publish(TOPIC_EN_OR_DIS_SYSTEM, msg);
-	BaseType_t xResult = xTaskNotifyWait(0, 0, &response, pdMS_TO_TICKS(5000));
-	if(xResult == pdFAIL)
-	{
-		return false;
-	}
-	return true;
-}
-
-bool send_msgTo_camMode(int cam_mode)
-{
-	char msg[20];
-	char mode[2];
-	uint32_t response = 0;
-	if(!mqtt_connected())
-	{
-		return false;
-	}
-	sprintf(mode, "%d", cam_mode);
-	strcpy(msg, "{\"cam_mode\":");
-	strcat(msg, mode);
-	strcat(msg, "}");
-	mqtt_publish(TOPIC_CAM_MODE, msg);
-	BaseType_t xResult = xTaskNotifyWait(0, 0, &response, pdMS_TO_TICKS(5000));
-	if(xResult == pdFAIL)
-	{
-		return false;
-	}
-	return true;
-}
-
-void task_Main(void *args)
-{
-	//SCREEN CONTROL AND USER ACTIONS
-	int buttonID       = 0;
-	int state          = STATE_RENDERING_SCREEN;
-	int screenID       = 0;
-	
-	int menuPosition_screen_0 = 0;
-	int menuPosition_screen_1 = 0;
-	int menuPosition_screen_2 = 0;
-	int menuPosition_screen_3 = 0;
-	char *confirmationText = "";
-	alertData alert;
-	isActivated_system = false;
-	while (true)
-	{	
-		switch (state)
-		{
-			case STATE_RENDERING_SCREEN:
-				cleanPage(1);
-				cleanPage(2);
-				cleanPage(3);
-				if(screenID == 0)
-				{
-					renderingScreenInitial(buttonID, &menuPosition_screen_0);
-					state        = STATE_INITIAL_SCREEN;
-				}
-				else if(screenID == 1)
-				{  
-					rederingConfirmationScreen(buttonID, &menuPosition_screen_1, "Enable System:");
-					state        = STATE_ENABLE_SYSTEM;
-
-				}
-				else if(screenID == 2)
-				{  
-					rederingConfirmationScreen(buttonID, &menuPosition_screen_2, "Disable System:");
-					state        = STATE_DISABLE_SYSTEM;
-				}
-				else if(screenID == 3)
-				{  
-					rederingCamerasModeScreen(buttonID, &menuPosition_screen_3);
-					state        = STATE_CAMERAS_MODE;
-				}
-				else if(screenID == 4)
-				{  
-					rendering_ConfirmationScreen(confirmationText);
-					state        = STATE_RENDERING_SCREEN;
-					screenID     = 0;
-				}else if(screenID == 5)
-				{
-					printText(1, "Sys. is already", 16, false);
-					printText(2, confirmationText, 16, false);
-					vTaskDelay(pdMS_TO_TICKS(2000));
-					state        = STATE_RENDERING_SCREEN;
-					screenID     = 0;
-				}else if(screenID == 6)
-				{
-					{
-						char camID[10];
-						sprintf(camID, "%d", alert.cameraID);
-						rendering_alertScreen(camID, alert.zone);
-					}
-					state = STATE_PROCESS_ALERT;
-				}
-				vTaskDelay(pdMS_TO_TICKS(100));
-				break;
-			case STATE_INITIAL_SCREEN:
-				if(xQueueReceive(QueueBT, &buttonID, pdMS_TO_TICKS(100)))
-				{
-					if(buttonID != 1)
-					{
-						state    = STATE_RENDERING_SCREEN;
-						screenID = 0;
-					}else
-					{
-						if(menuPosition_screen_0 == 0) // Enable system
-						{
-							state = STATE_RENDERING_SCREEN;
-							if(!isActivated_system)
-							{
-								screenID = 1;								
-							}else
-							{
-								screenID = 5;
-								confirmationText = "    enabled !   ";
-							}
-
-						}
-						else if(menuPosition_screen_0 == 1) // Disable system
-						{ 
-							state = STATE_RENDERING_SCREEN;
-							if(isActivated_system)
-							{
-								screenID = 2;
-							}else
-							{
-								screenID = 5;
-								confirmationText = "  deactivated ! ";
-							}
-						}
-						else if(menuPosition_screen_0 == 2) { screenID = 3; state = STATE_RENDERING_SCREEN; }
-						menuPosition_screen_0 = 0;
-					}
-				}else
-				{
-					if(xQueueReceive(alertQueue, &alert, pdMS_TO_TICKS(0)))
-					{
-						initTimerAlertLed();
-						state    = STATE_RENDERING_SCREEN;
-						screenID = 6;
-					}else
-					{
-						state    = STATE_INITIAL_SCREEN;
-					}
-				}
-				break;
-			case STATE_ENABLE_SYSTEM:
-				if(xQueueReceive(QueueBT, &buttonID, pdMS_TO_TICKS(100)))
-				{
-					if(buttonID != 1)
-					{
-						state    = STATE_RENDERING_SCREEN;
-						screenID = 1;
-					}else
-					{
-						if(menuPosition_screen_1 == 0) // (YES)
-						{
-							screenID = 4;
-							if(send_msgTo_enableSystem("true"))
-							{
-								isActivated_system = true;
-								gpio_set_level(LED_GREEN_PIN, 1);
-								gpio_set_level(LED_RED_PIN,   0);
-								confirmationText = "  -> Confirmed  ";
-							}else
-							{
-								isActivated_system = false;
-								gpio_set_level(LED_GREEN_PIN, 0);
-								gpio_set_level(LED_RED_PIN,   1);
-								confirmationText = "    -> Error    ";
-							}
-						} 
-						else if(menuPosition_screen_1 == 1) // (NO)
-						{ 
-							screenID = 0;
-						} 
-						menuPosition_screen_1 = 0;
-						state                 = STATE_RENDERING_SCREEN;
-					}
-				}else
-				{
-					state = STATE_ENABLE_SYSTEM;
-				}
-				break;
-			case STATE_DISABLE_SYSTEM:
-				if(xQueueReceive(QueueBT, &buttonID, pdMS_TO_TICKS(100)))
-				{
-					if(buttonID != 1)
-					{
-						state    = STATE_RENDERING_SCREEN;
-						screenID = 2;
-					}else
-					{
-						if(menuPosition_screen_2 == 0) // (YES)
-						{
-							screenID = 4;
-							if(send_msgTo_enableSystem("false"))
-							{
-								isActivated_system = false;
-								gpio_set_level(LED_GREEN_PIN, 0);
-								gpio_set_level(LED_RED_PIN,   1);
-								confirmationText = "  -> Confirmed  ";
-							}else
-							{
-								isActivated_system = true;
-								gpio_set_level(LED_GREEN_PIN, 1);
-								gpio_set_level(LED_RED_PIN,   0);
-								confirmationText = "    -> Error    ";
-							}
-						} 
-						else if(menuPosition_screen_2 == 1) // (NO)
-						{
-							screenID = 0;
-						}
-						menuPosition_screen_2 = 0;
-						state                 = STATE_RENDERING_SCREEN;
-					}
-				}else
-				{
-					if(xQueueReceive(alertQueue, &alert, pdMS_TO_TICKS(0)))
-					{
-						initTimerAlertLed();
-						state    = STATE_RENDERING_SCREEN;
-						screenID = 6;
-					}else
-					{
-						state    = STATE_DISABLE_SYSTEM;
-					}
-				}
-				break;
-			case STATE_CAMERAS_MODE:
-				if(xQueueReceive(QueueBT, &buttonID, pdMS_TO_TICKS(100)))
-				{
-					if(buttonID != 1)
-					{
-						state    = STATE_RENDERING_SCREEN;
-						screenID = 3;
-					}else
-					{
-						if(menuPosition_screen_3 == 0) // (Continuos)
-						{
-							screenID = 4;
-							if(isActivated_system)
-							{
-								if(send_msgTo_camMode(1))
-								{
-									confirmationText = "  -> Confirmed  ";
-								}else
-								{
-									confirmationText = "    -> Error    ";
-								}
-							}else
-							{
-								confirmationText = "    -> Error    ";
-							}
-						} 
-						else if(menuPosition_screen_3 == 1) // (Personalized)
-						{
-							screenID = 4;
-							if(isActivated_system)
-							{
-								if(send_msgTo_camMode(2))
-								{
-									confirmationText = "  -> Confirmed  ";
-								}else
-								{
-									confirmationText = "    -> Error    ";
-								}
-							}else
-							{
-								confirmationText = "    -> Error    ";
-							}					
-						}
-						else if(menuPosition_screen_3 == 2) { screenID = 0; } // (Back)
-						menuPosition_screen_3 = 0;
-						state                 = STATE_RENDERING_SCREEN;
-					}
-				}else
-				{
-					if(xQueueReceive(alertQueue, &alert, pdMS_TO_TICKS(0)))
-					{
-						initTimerAlertLed();
-						state    = STATE_RENDERING_SCREEN;
-						screenID = 6;
-					}else
-					{
-						state    = STATE_CAMERAS_MODE;
-					}
-				}
-				break;
-			case STATE_PROCESS_ALERT:
-				if(xQueueReceive(QueueBT, &buttonID, pdMS_TO_TICKS(100)))
-				{
-					if(buttonID == 1)
-					{
-						esp_timer_stop(xTimerAlertLedHandler);
-						gpio_set_level(LED_RED_PIN, 0);
-						state            = STATE_RENDERING_SCREEN;
-						screenID         = 4;
-						confirmationText = "  -> Confirmed  ";
-					}
-				}else
-				{
-					if(xQueueReceive(alertQueue, &alert, pdMS_TO_TICKS(0)))
-					{
-						state    = STATE_RENDERING_SCREEN;
-						screenID = 6;
-					}else
-					{
-						state    = STATE_PROCESS_ALERT;
-					}
-				}			    
-				break;
-			default:
-				break;
-		}
-	}
-}
+TaskHandle_t      taskHandler_main;
+TaskHandle_t      taskHandler_displayOled;
+TaskHandle_t      taskHandler_pkg_processor;
+QueueHandle_t     queueHandler_receivedAlerts;
+SemaphoreHandle_t semaphore_sinc_TaskDisplayAndMain;
 
 void app_main(void)
 {
-	// CONFIGURE OLED DISPLAY
-	initOledDisplay();
-	cleanScreen();
-	printText(0, "Setup:----------", 16, false);
-	printText(1, "(OK) Display", 16, false);
-	// ================================================================
 	// CONFIGURE PUSH BUTTONS
-	initButtons();
-	QueueBT = getHandlerQueueBT();
-	printText(2, "(OK) Buttons", 16, false);
+	set_logic_level(1);
+	set_button(BT_1_PIN, false, false);
+	set_button(BT_2_PIN, false, false);
+	set_button(BT_3_PIN, false, false);
 	// ================================================================
 	// CONFIGURE LEDS
 	gpio_set_direction(LED_GREEN_PIN, GPIO_MODE_OUTPUT);
@@ -498,7 +93,12 @@ void app_main(void)
 	gpio_set_level(LED_GREEN_PIN, 0);
 	gpio_set_level(LED_RED_PIN,   1);
 	// ================================================================
-	alertQueue = xQueueCreate(4, sizeof(alertData));
+	// CONFIGURE MATRIX KEYBOARD
+	init_m_key();
+	// ================================================================
+	// CONFIGURE DISPLAY
+	initOledDisplay();
+	cleanScreen();
 	// ================================================================
 	// CONFIGURE WIFI
 	esp_err_t ret = nvs_flash_init();
@@ -507,36 +107,374 @@ void app_main(void)
       ESP_ERROR_CHECK(nvs_flash_erase());
       ret = nvs_flash_init();
     }
+
     ESP_ERROR_CHECK(ret);
     ESP_LOGI(WIFI_TAG, "ESP_WIFI_MODE_STA");
 	esp_err_t isWifiOnline = initWifi(); 
     if(isWifiOnline == ESP_OK)
 	{
-		printText(3, "(OK) Wifi", 9, false);
+		while(!wifi_isConnected()) { vTaskDelay(pdTICKS_TO_MS(1000)); }
 	}else
-	{
-		printText(3, "(ER) Wifi", 9, false);
-	}
-	// WAIT UNTIL CONNECT
-	while(!wifi_isConnected())
-	{
-		vTaskDelay(pdTICKS_TO_MS(1000));
-	}
-	cleanScreen();
+		esp_restart();
 	// ================================================================
-	// CREATE TASK TO CONTROL THE SCREEN AND USER ACTIONS
-	xTaskCreate(task_Main, "Main Task", 9*4096, NULL, 1, &mainTaskHandler);
+	// CREATES TASKS
+	semaphore_sinc_TaskDisplayAndMain = xSemaphoreCreateBinary();
+	xTaskCreatePinnedToCore(task_MQTT_Controller,   "mqtt_task",    3*4096, NULL, PR_MQTT_TASK, get_mqttHandle(), 1);
+	xTaskCreatePinnedToCore(displayOled_task,      "display_task",  7*4096, (void *) semaphore_sinc_TaskDisplayAndMain, PR_DISPLAY_TASK, &taskHandler_displayOled, 0);
+	xTaskCreatePinnedToCore(task_packageProcessor, "pkg_processor", 3*4096, (void *) getHandler_MQTTpackageQueue(), PR_PKG_PROCESSOR_TASK, &taskHandler_pkg_processor, 0);
+	xTaskCreatePinnedToCore(main_task,             "main_task",     9*4096, NULL, PR_MAIN_TASK, &taskHandler_main, 0);
+	// INIT TIMER
+	initTimer_rfs_top_menu();
 	// ================================================================
-	// CONFIGURE MQTT --------------------------------------------------
-	// MQTT go running on second Esp32 Core
-	mqttParameter *mqttParam = (mqttParameter *) malloc(sizeof(mqttParameter));
-	mqttParam->alertQueue      = alertQueue;
-	mqttParam->mainTaskHandler = mainTaskHandler;
-	xTaskCreatePinnedToCore(task_MQTT_Controller, "Task MQTT", 9*4096, (void *) mqttParam, 1, get_mqttHandle(), 1);
 	mqtt_connection();
 	// ================================================================
-	info_systemConnectionStatus((void*) NULL);
-	// INIT TIMER ------------------------------------------------------
-	initTimers();
-	//------------------------------------------------------------------
+	// INIIT THE LITTLE_FS
+	if(!initFileSystem())
+		esp_restart();
+	// ================================================================
+	updateTopMenu();
 }
+
+void main_task(void *args)
+{
+	uint8_t next_state        =  STATE_INITIAL_SCREEN;
+	uint8_t previous_state    = -1;
+	uint8_t current_action    =  0;
+	uint8_t buttonPressed     =  0;
+	uint8_t next_screenID     = -1;
+	uint8_t current_screen    = -1;
+	uint8_t sys_status        =  0; // 0 - disabled | 1 - enabled  
+
+	while(queueHandler_receivedAlerts == NULL)
+	{
+		QueueHandle_t *handler   = get_queueHandler_alert();
+		queueHandler_receivedAlerts      = *handler;
+	}
+	
+	// Sends command to display task
+	sendCommand_to_refreshScreen(0, SCREEN_INITIAL_SCREEN);
+	while (true)
+	{
+		vTaskDelay(pdMS_TO_TICKS(100));
+		switch (next_state)
+		{
+			case STATE_INITIAL_SCREEN:
+				buttonPressed = getButtonPressed();
+				if(buttonPressed == BUTTON_UP || buttonPressed == BUTTON_DOWN)
+				{
+					sendCommand_to_refreshScreen(buttonPressed, SCREEN_INITIAL_SCREEN);
+				}else if(buttonPressed == BUTTON_ENTER)
+				{
+					if(getCursorPosition() == OPTION_ENABLE_SYSTEM && sys_status == 0)
+					{
+						next_state    = STATE_EN_SYSTEM;
+						next_screenID = SCREEN_EN_SYSTEM;
+						setCursorPosition(0);			
+					}
+					else if(getCursorPosition() == OPTION_DISABLE_SYSTEM && sys_status == 1)
+					{
+						next_state    = STATE_DIS_SYSTEM;
+						next_screenID = SCREEN_DIS_SYSTEM;
+						setCursorPosition(0);
+					}
+					else if(getCursorPosition() == OPTION_CAM_MODE && sys_status == 1)
+					{
+						next_state    = STATE_CAMERAS_MODE;
+						next_screenID = SCREEN_CAMERAS_MODE;
+						setCursorPosition(0);
+					}else
+					{
+						next_state    = STATE_INITIAL_SCREEN;
+						next_screenID = SCREEN_INITIAL_SCREEN; 
+					}
+					sendCommand_to_refreshScreen(0, next_screenID);
+				}else if(uxQueueMessagesWaiting(queueHandler_receivedAlerts) > 0)
+				{
+					// New alert packages need to be process.
+					next_state    = STATE_PROCESS_ALERT;
+					setCursorPosition(0);
+					sendCommand_to_refreshScreen(0, SCREEN_ALERT_PROCESS);
+				}else
+				{
+					next_state = STATE_INITIAL_SCREEN;
+				}
+				break;
+			case STATE_EN_SYSTEM:
+			case STATE_DIS_SYSTEM:
+				buttonPressed = getButtonPressed();
+				current_screen = (next_state == STATE_EN_SYSTEM) ? SCREEN_EN_SYSTEM : SCREEN_DIS_SYSTEM;
+				current_action = (next_state == STATE_EN_SYSTEM) ? OP_EN_SYSTEM : OP_DIS_SYSTEM;
+				if(buttonPressed == BUTTON_UP || buttonPressed == BUTTON_DOWN)
+				{
+					sendCommand_to_refreshScreen(buttonPressed, current_screen);
+				}else if(buttonPressed == BUTTON_ENTER)
+				{
+					if(getCursorPosition() == OPTION_YES)
+					{
+						next_state    = STATE_VALIDATE_PWD;
+						next_screenID = SCREEN_VALIDATE_PWD;				
+					}
+					else if(getCursorPosition() == OPTION_NO)
+					{
+						next_state    = STATE_INITIAL_SCREEN;
+						next_screenID = SCREEN_INITIAL_SCREEN;
+					}
+					setCursorPosition(0);
+					sendCommand_to_refreshScreen(0, next_screenID);
+				}else
+				{
+					next_state = (next_state == STATE_EN_SYSTEM) ? STATE_EN_SYSTEM : STATE_DIS_SYSTEM;
+				}
+				break;
+			case STATE_CAMERAS_MODE:
+				buttonPressed = getButtonPressed();
+				if(buttonPressed == BUTTON_UP || buttonPressed == BUTTON_DOWN)
+				{
+					sendCommand_to_refreshScreen(buttonPressed, SCREEN_CAMERAS_MODE);
+				}else if(buttonPressed == BUTTON_ENTER)
+				{
+					if(getCursorPosition() == OPTION_CONTINUOUS_MODE || getCursorPosition() == OPTION_PERSONALIZED_MODE)
+					{
+						next_state    = STATE_VALIDATE_PWD;
+						next_screenID = SCREEN_VALIDATE_PWD;				
+					}
+					else if(getCursorPosition() == OPTION_TO_BACK)
+					{
+						next_state    = STATE_INITIAL_SCREEN;
+						next_screenID = SCREEN_INITIAL_SCREEN;						
+					}
+					current_action = (getCursorPosition() == OPTION_CONTINUOUS_MODE) ? OP_CONT_MODE : OP_PERS_MODE;
+					setCursorPosition(0);
+					sendCommand_to_refreshScreen(0, next_screenID);
+				}else
+				{
+					next_state = STATE_CAMERAS_MODE;
+				}
+				break;
+			case STATE_PROCESS_ALERT:
+				buttonPressed = getButtonPressed();
+				if(buttonPressed == BUTTON_ENTER)
+				{
+					next_state     = STATE_VALIDATE_PWD;
+					previous_state = STATE_PROCESS_ALERT;
+					next_screenID  = SCREEN_VALIDATE_PWD;
+					current_action = OP_DIS_ALERT;
+					xTaskNotify(taskHandler_displayOled,(uint32_t) '*', eSetValueWithOverwrite);
+					xSemaphoreTake(semaphore_sinc_TaskDisplayAndMain, portMAX_DELAY);
+					sendCommand_to_refreshScreen(0, SCREEN_VALIDATE_PWD);
+				}
+				break;
+			case STATE_VALIDATE_PWD:
+				{	
+					char  char_inserted;
+					int   pos_key;
+					char  password[PASSWORD_SIZE + 1];
+					memset(password, ' ', (PASSWORD_SIZE + 1) * sizeof(char));
+					uint8_t pwd_index = 0;
+					while(next_state == STATE_VALIDATE_PWD)
+					{
+						pos_key        = scan_keyboard();
+						buttonPressed  = getButtonPressed();
+						if(pos_key != -1)
+						{
+							char_inserted = key_selected(pos_key);
+							if(char_inserted == '*' && previous_state == STATE_PROCESS_ALERT) // STOP OPERATION
+							{
+								continue;
+							}
+							ESP_LOGI(APP_MAIN_TAG, "Char Inserted: %c", char_inserted);
+							xTaskNotify(taskHandler_displayOled,(uint32_t) char_inserted, eSetValueWithOverwrite);
+							// Waits until the display task to process the sent caractere.
+							xSemaphoreTake(semaphore_sinc_TaskDisplayAndMain, portMAX_DELAY);
+							if(char_inserted == '#') // ERASE THE PASSWORD
+							{
+                    	        memset(password, ' ', (PASSWORD_SIZE + 1) * sizeof(char));
+								pwd_index = 0;
+							}
+							else if(char_inserted == '*') // STOP OPERATION
+							{
+								next_state     = STATE_INITIAL_SCREEN;
+								previous_state = -1;
+								sendCommand_to_refreshScreen(0, SCREEN_INITIAL_SCREEN);
+							}else
+							{
+								if(pwd_index < PASSWORD_SIZE)
+							    {
+							    	password[pwd_index++] = char_inserted;
+							    }
+							}
+						}else if(buttonPressed == BUTTON_ENTER)
+						{
+							password[PASSWORD_SIZE] = '\0';
+							// VALIDATES THE PASSWORD
+							if(validatePassword(password))
+							{
+								next_state     = STATE_PROCESS_OPERATION;
+								previous_state = -1;
+								char_inserted  = '*';
+							}else
+							{
+								char_inserted = '#';
+								pwd_index     = 0;
+								memset(password, ' ', (PASSWORD_SIZE + 1) * sizeof(char));
+							}
+							xTaskNotify(taskHandler_displayOled,(uint32_t) char_inserted, eSetValueWithOverwrite);
+							// Waits until the display task to process the sent caractere.
+							xSemaphoreTake(semaphore_sinc_TaskDisplayAndMain, portMAX_DELAY);
+						}
+						vTaskDelay(pdMS_TO_TICKS(100));
+					}
+					break;
+				}
+			case STATE_PROCESS_OPERATION:
+				if(process_current_operation(current_action))
+				{
+					next_state = STATE_OPERATION_SUCCESS;
+					if(current_action == OP_EN_SYSTEM)
+						sys_status = 1;
+					else if(current_action == OP_DIS_SYSTEM)
+						sys_status = 0;
+				}else
+					next_state = STATE_OPERATION_FAILURE;
+				break;
+			case STATE_REFRESH_PWD:
+				break;
+			case STATE_OPERATION_SUCCESS:
+				next_state = STATE_INITIAL_SCREEN;
+				sendCommand_to_refreshScreen(0, SCREEN_OPERATION_SUCCESS);
+				sendCommand_to_refreshScreen(0, SCREEN_INITIAL_SCREEN);
+				break;
+			case STATE_OPERATION_FAILURE:
+				next_state = STATE_INITIAL_SCREEN;
+				sendCommand_to_refreshScreen(0, SCREEN_OPERATION_FAILURE);
+				sendCommand_to_refreshScreen(0, SCREEN_INITIAL_SCREEN);
+				break;
+		}	
+	}
+}
+
+uint8_t getButtonPressed()
+{
+	uint8_t BT_values = 0b000;
+	BT_values = (readButton(BT_1_PIN)) ? BT_values | (1 << 2) : BT_values & ~(1 << 2);
+	BT_values = (readButton(BT_2_PIN)) ? BT_values | (1 << 1) : BT_values & ~(1 << 1);
+	BT_values = (readButton(BT_3_PIN)) ? BT_values | (1 << 0) : BT_values & ~(1 << 0);
+	
+	switch (BT_values)
+	{
+		case 0b001: ESP_LOGI(APP_MAIN_TAG, "Button pressed: %d", BUTTON_UP);    return BUTTON_UP;    break;
+		case 0b010: ESP_LOGI(APP_MAIN_TAG, "Button pressed: %d", BUTTON_DOWN);  return BUTTON_DOWN;  break;
+		case 0b100: ESP_LOGI(APP_MAIN_TAG, "Button pressed: %d", BUTTON_ENTER); return BUTTON_ENTER; break;
+		default:    return 0;            break;
+	}
+}
+
+bool validatePassword(char *password)
+{
+	ESP_LOGI(APP_MAIN_TAG, "Validating password: %s", password);
+	// Loads the system's password
+	char  system_pwd[PASSWORD_SIZE + 1];
+	FILE *pwd_file = openFile(PWD_PATH, "r");
+	if(pwd_file != NULL)
+	{
+        fgets(system_pwd, PASSWORD_SIZE + 1, pwd_file);
+		ESP_LOGI(APP_MAIN_TAG, "System's Password: %s", system_pwd);
+		fclose(pwd_file);
+    }
+	if(strcmp(system_pwd, password) != 0)
+		return false;
+	return true;
+}
+
+void sendCommand_to_refreshScreen(uint8_t buttonPressed, uint8_t screens_ID)
+{
+	uint8_t command = 0;
+	switch (screens_ID)
+	{
+		case SCREEN_INITIAL_SCREEN:
+		case SCREEN_EN_SYSTEM:
+		case SCREEN_DIS_SYSTEM:
+		case SCREEN_CAMERAS_MODE:
+		case SCREEN_ALERT_PROCESS:      
+		case SCREEN_VALIDATE_PWD:
+			command = DisplayTask_format_screenChange_command(buttonPressed, screens_ID);
+			break;
+		case SCREEN_OPERATION_SUCCESS:
+		case SCREEN_OPERATION_FAILURE:
+			command = DisplayTask_format_sucess_failureScreen_command(screens_ID);
+			break;
+		default: break;
+	}
+	xTaskNotify(taskHandler_displayOled, command, eSetValueWithOverwrite);
+	// Waits until the screen to be refreshed.
+	xSemaphoreTake(semaphore_sinc_TaskDisplayAndMain, portMAX_DELAY);
+}
+
+bool process_current_operation(uint8_t action)
+{
+	bool operation_status;
+	char msg[25];
+	if(!wifi_isConnected() || !mqtt_connected())
+	{
+		ESP_LOGW(APP_MAIN_TAG, "Wifi or MQTT disconnected.");
+		return false;
+	}
+	switch (action)
+	{
+		case OP_EN_SYSTEM:
+			strcpy(msg, "{\"enable_system\":true}");
+			if(mqtt_publish(TOPIC_EN_OR_DIS_SYSTEM, msg))
+			{
+				gpio_set_level(LED_GREEN_PIN, 1);
+				gpio_set_level(LED_RED_PIN,   0);
+				ESP_LOGI(APP_MAIN_TAG, "System activated!!");
+				operation_status = true;
+			}else
+				operation_status = false;
+			break;
+		case OP_DIS_SYSTEM:
+			strcpy(msg, "{\"enable_system\":false}");
+			if(mqtt_publish(TOPIC_EN_OR_DIS_SYSTEM, msg))
+			{
+				gpio_set_level(LED_RED_PIN,   1);
+				gpio_set_level(LED_GREEN_PIN, 0);
+				ESP_LOGI(APP_MAIN_TAG, "System disabled!!");
+				operation_status = true;
+			}else
+				operation_status = false;
+			break;
+		case OP_CONT_MODE:
+			strcpy(msg, "{\"cam_mode\":1}");
+			if(mqtt_publish(TOPIC_CAM_MODE, msg))
+			{
+				operation_status = true;
+				ESP_LOGI(APP_MAIN_TAG, "Continuous mode enabled!!");
+			}else
+				operation_status = false;
+			break;
+		case OP_PERS_MODE:
+			strcpy(msg, "{\"cam_mode\":2}");
+			if(mqtt_publish(TOPIC_CAM_MODE, msg))
+			{
+				operation_status = true;
+				ESP_LOGI(APP_MAIN_TAG, "Personalized mode enabled!!");
+			}else
+				operation_status = false;
+			break;
+		case OP_DIS_ALERT:
+			strcpy(msg, "{\"disable\":true}");
+			if(mqtt_publish(TOPIC_DIS_ALERT, msg))
+			{
+				operation_status = true;
+				ESP_LOGI(APP_MAIN_TAG, "Alert disabled!!");
+			}else
+				operation_status = false;
+			break;
+		default:
+			operation_status = false;
+			ESP_LOGE(APP_MAIN_TAG, "Operation ID don't recognized: %d", action);
+			break;
+	}
+	return operation_status;
+}
+

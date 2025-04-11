@@ -1,74 +1,35 @@
 #include "headers/buttons.h"
 
-QueueHandle_t  interruptQueueBT;
-QueueHandle_t      valuesQueueBT;
+uint8_t enable_level;
 
-static void IRAM_ATTR BT_1_Interrupt(void *params)
+uint8_t readButton(uint8_t BT_PIN)
 {
-	int bt1_value = 1;
-	xQueueSendFromISR(interruptQueueBT, &bt1_value, NULL);
-}
-
-static void IRAM_ATTR BT_2_Interrupt(void *params)
-{
-	int bt2_value = 2;
-	xQueueSendFromISR(interruptQueueBT, &bt2_value, NULL);
-}
-
-static void IRAM_ATTR BT_3_Interrupt(void *params)
-{
-	int bt3_value = 3;
-	xQueueSendFromISR(interruptQueueBT, &bt3_value, NULL);
-}
-
-QueueHandle_t getHandlerQueueBT()
-{
-    return valuesQueueBT;
-}
-
-void task_BTSignalDebounce(void *params)
-{
-	int BT_ID;
-	int last_BT_ID = -1;
-	while(1){
-		if(xQueueReceive(interruptQueueBT, &BT_ID, pdMS_TO_TICKS(150)))
+	uint8_t value = gpio_get_level(BT_PIN);
+	if(value == enable_level)
+	{
+		while(gpio_get_level(BT_PIN) == enable_level) //Loop to wait the button to be released.
 		{
-			last_BT_ID = BT_ID;
-		}else
-		{
-			if(last_BT_ID != -1)
-			{
-				ESP_LOGI("BT", "Button %d pressed.", last_BT_ID);
-				xQueueSend(valuesQueueBT, &last_BT_ID, pdMS_TO_TICKS(0));
-				last_BT_ID = -1;
-			}
+			vTaskDelay(pdMS_TO_TICKS(50));
 		}
 	}
+	return value;
 }
 
-void initButtons()
+void set_button(uint8_t BT_PIN, bool en_pullUp, bool en_pullDown)
 {
-    gpio_set_direction(BT_1_PIN, GPIO_MODE_INPUT);
-	gpio_set_direction(BT_2_PIN, GPIO_MODE_INPUT);
-	gpio_set_direction(BT_3_PIN, GPIO_MODE_INPUT);
-	// Disables pulldown and pullup
-	gpio_pulldown_dis(BT_1_PIN);
-	gpio_pulldown_dis(BT_2_PIN);
-	gpio_pulldown_dis(BT_3_PIN);
-	gpio_pullup_dis(BT_1_PIN);
-	gpio_pullup_dis(BT_2_PIN);
-	gpio_pullup_dis(BT_3_PIN);
-	gpio_set_intr_type(BT_1_PIN, GPIO_INTR_POSEDGE);
-	gpio_set_intr_type(BT_2_PIN, GPIO_INTR_POSEDGE);
-	gpio_set_intr_type(BT_3_PIN, GPIO_INTR_POSEDGE);
+	gpio_set_direction(BT_PIN, GPIO_MODE_INPUT);
+	if(en_pullUp)
+		gpio_pullup_en(BT_PIN);
+	else
+		gpio_pullup_dis(BT_PIN);
 
-    interruptQueueBT = xQueueCreate(4, sizeof(int));
-	valuesQueueBT    = xQueueCreate(4, sizeof(int));
+	if(en_pullDown)
+		gpio_pulldown_en(BT_PIN);
+	else
+		gpio_pulldown_dis(BT_PIN);
+}
 
-    xTaskCreate(task_BTSignalDebounce, "Button_SignalDebounce", 2048, NULL, 1, NULL);
-
-    gpio_install_isr_service(0);
-	gpio_isr_handler_add(BT_1_PIN, BT_1_Interrupt, (void *)BT_1_PIN);
-	gpio_isr_handler_add(BT_2_PIN, BT_2_Interrupt, (void *)BT_2_PIN);
-	gpio_isr_handler_add(BT_3_PIN, BT_3_Interrupt, (void *)BT_3_PIN);
+void set_logic_level(uint8_t en_level)
+{
+	enable_level = en_level;
 }

@@ -6,6 +6,8 @@
 #define WIFI_CONNECTED_BIT BIT0
 #define WIFI_FAIL_BIT      BIT1
 
+void setWifiConnected(bool status);
+
 /* FreeRTOS event group to signal when Wi-fi is connected*/
 static EventGroupHandle_t s_wifi_event_group;
 
@@ -14,6 +16,7 @@ static int s_retry_num     = 0;
 static int S_MAXIMUM_RETRY = 5;
 
 bool wifiConnected = false;
+SemaphoreHandle_t xMutex_wifi;
 
 char *get_wifi_err(uint8_t reason)
 {
@@ -147,38 +150,43 @@ static void wifi_event_handler(void* arg, esp_event_base_t event_base, int32_t e
 {
     switch (event_id)
     {
-    case WIFI_EVENT_STA_START:
-        ESP_LOGI(WIFI_TAG,"wifi event started.");
-        wifiConnected = false;
-        esp_wifi_connect();
-        break;
-    case WIFI_EVENT_STA_DISCONNECTED:
-        {
-            wifiConnected = false;
-            wifi_event_sta_disconnected_t *wifi_event_sta_disconnected = event_data;
-            ESP_LOGE(WIFI_TAG, "wifi error: %s", get_wifi_err(wifi_event_sta_disconnected->reason));
-            if (s_retry_num < S_MAXIMUM_RETRY)
-            {
-                esp_wifi_connect();
-                s_retry_num++;
-                ESP_LOGI(WIFI_TAG, "retry to connect to the AP....");
-            } else
-            {
-                s_retry_num = 0;
-                xEventGroupSetBits(s_wifi_event_group, WIFI_FAIL_BIT);
-            }
-            ESP_LOGI(WIFI_TAG,"connect to the AP fail.");
+        case WIFI_EVENT_STA_START:
+            ESP_LOGI(WIFI_TAG,"Wifi event started!!");
+            setWifiConnected(false);
+            esp_wifi_connect();
             break;
-        }
-    case IP_EVENT_STA_GOT_IP:
-        ip_event_got_ip_t* event = (ip_event_got_ip_t*) event_data;
-        ESP_LOGI(WIFI_TAG, "got ip:" IPSTR, IP2STR(&event->ip_info.ip));
-        s_retry_num   = 0;
-        wifiConnected = true;
-        xEventGroupSetBits(s_wifi_event_group, WIFI_CONNECTED_BIT);
-        break;
-    default:
-        break;
+        case WIFI_EVENT_STA_CONNECTED:
+            ESP_LOGI(WIFI_TAG, "Wifi connected!!");
+            // Is TRUE only if got an IP.
+            setWifiConnected(false);
+            break;
+        case WIFI_EVENT_STA_DISCONNECTED:
+            {
+                setWifiConnected(false);
+                wifi_event_sta_disconnected_t *wifi_event_sta_disconnected = event_data;
+                ESP_LOGE(WIFI_TAG, "Wifi disconnected!!");
+                ESP_LOGE(WIFI_TAG, "Wifi error: %s", get_wifi_err(wifi_event_sta_disconnected->reason));
+                if (s_retry_num < S_MAXIMUM_RETRY)
+                {
+                    esp_wifi_connect();
+                    s_retry_num++;
+                    ESP_LOGI(WIFI_TAG, "Retry to connect to the AP....");
+                } else
+                {
+                    s_retry_num = 0;
+                    xEventGroupSetBits(s_wifi_event_group, WIFI_FAIL_BIT);
+                }
+                break;
+            }
+        case IP_EVENT_STA_GOT_IP:
+            ip_event_got_ip_t* event = (ip_event_got_ip_t*) event_data;
+            ESP_LOGI(WIFI_TAG, "Got ip:" IPSTR, IP2STR(&event->ip_info.ip));
+            s_retry_num   = 0;
+            setWifiConnected(true);
+            xEventGroupSetBits(s_wifi_event_group, WIFI_CONNECTED_BIT);
+            break;
+        default:
+            break;
     }
 }
 
@@ -191,7 +199,22 @@ esp_err_t wifi_disconnect(void)
 
 bool wifi_isConnected(void)
 {
-    return wifiConnected;
+    bool value = false;
+    if(xSemaphoreTake(xMutex_wifi, portMAX_DELAY))
+    {
+        value = wifiConnected;
+        xSemaphoreGive(xMutex_wifi);
+    }
+    return value;
+}
+
+void setWifiConnected(bool status)
+{
+    if(xSemaphoreTake(xMutex_wifi, portMAX_DELAY))
+    {
+        wifiConnected = status;
+        xSemaphoreGive(xMutex_wifi);
+    }
 }
 
 void wifi_connect(void)
@@ -200,13 +223,23 @@ void wifi_connect(void)
     esp_wifi_connect();
 }
 
-esp_err_t initWifi()
+esp_err_t initWifi(void)
 {
+    xMutex_wifi = xSemaphoreCreateMutex();
+    if(xMutex_wifi == NULL)
+    {
+        ESP_LOGE(WIFI_TAG, "Creation mutex error.");
+        return ESP_FAIL;
+    }
     s_wifi_event_group = xEventGroupCreate();
 
     ESP_ERROR_CHECK(esp_netif_init());
 
     ESP_ERROR_CHECK(esp_event_loop_create_default());
+
+    #if(SNTP_ENABLE)
+        SNTP_init();
+    #endif
     esp_netif_create_default_wifi_sta();
 
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
@@ -227,15 +260,15 @@ esp_err_t initWifi()
 
     wifi_config_t wifi_config = {
         .sta = {
-            .ssid = WIFI_SSID,
+            .ssid     = WIFI_SSID,
             .password = WIFI_PWD
         },
     };
     ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA) );
     ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_config) );
-    ESP_ERROR_CHECK(esp_wifi_start() );
+    ESP_ERROR_CHECK(esp_wifi_start());
 
-    ESP_LOGI(WIFI_TAG, "wifi_init_sta finished.");
+    ESP_LOGI(WIFI_TAG, "Wifi_init_sta finished!!");
 
     EventBits_t bits = WIFI_FAIL_BIT;
     while(bits & WIFI_FAIL_BIT)
@@ -252,12 +285,17 @@ esp_err_t initWifi()
         * happened. */
         if (bits & WIFI_FAIL_BIT)
         {
-            ESP_LOGE(WIFI_TAG, "failed to connect to SSID:%s", WIFI_SSID);
+            ESP_LOGE(WIFI_TAG, "Failed to connect to SSID: %s", WIFI_SSID);
             wifi_connect();
         }else
         {
-            ESP_LOGI(WIFI_TAG, "connected to ap SSID:%s", WIFI_SSID);
+            ESP_LOGI(WIFI_TAG, "Connected to ap SSID: %s", WIFI_SSID);
         }
     }
+
+    #if(SNTP_ENABLE)
+        SNTP_start();
+    #endif
+
     return ESP_OK;
 }
