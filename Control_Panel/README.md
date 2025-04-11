@@ -1,35 +1,90 @@
-| Supported Targets | ESP32 | ESP32-C2 | ESP32-C3 | ESP32-C5 | ESP32-C6 | ESP32-H2 | ESP32-P4 | ESP32-S2 | ESP32-S3 |
-| ----------------- | ----- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
+# Control Panel - ESP32
 
-# _Sample project_
+## 🛰️ Project: Motion-Based Security Monitoring and Alert System
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
+This project aims to monitor and manage specific areas using a network of devices capable of issuing alerts upon motion detection. It is composed of three main elements:
 
-This is the simplest buildable example. The example is used by command `idf.py create-project`
-that copies the project to user specified path and set it's name. For more information follow the [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project)
+- **Physical control panel** — for user interaction with the system;
+- **Monitoring devices** — responsible for surveillance and alert generation;
+- **Local application** — allows for managing the network and configuring the system.
 
+---
 
+## 📟 Control Panel
 
-## How to use example
-We encourage the users to use the example as a template for the new projects.
-A recommended way is to follow the instructions on a [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project).
+### 🧠 Technologies Used
 
-## Example folder contents
+- Microcontroller: **ESP32 (ESP-WROOM-32)**
+- Operating System: **FreeRTOS**
+- Programming Language: **C**
+- Framework: **ESP-IDF v5.3.1**
+- Protocols: **Wi-Fi**, **MQTT**, **I2C**, **SNTP**
+- Storage: **LittleFS**
 
-The project **sample_project** contains one source file in C language [main.c](main/main.c). The file is located in folder [main](main).
+### 🎛️ User Interface
 
-ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt`
-files that provide set of directives and instructions describing the project's source files and targets
-(executable, library, or both). 
+- 0.96" OLED Display
+- Push-buttons
+- LEDs
+- 4x3 Keypad
 
-Below is short explanation of remaining files in the project folder.
+---
 
-```
-├── CMakeLists.txt
-├── main
-│   ├── CMakeLists.txt
-│   └── main.c
-└── README.md                  This is the file you are currently reading
-```
-Additionally, the sample project contains Makefile and component.mk files, used for the legacy Make based build system. 
-They are not used or needed when building with CMake and idf.py.
+## ⚙️ Features
+
+- Enable/disable the monitoring system.
+- Display alerts and messages on the screen.
+- Deactivate alerts.
+- Change camera operation mode:
+  - **Continuous mode**
+  - **Custom mode**
+
+---
+
+## 🧩 Firmware Architecture
+
+The firmware uses FreeRTOS and relies on:
+
+- Task notifications
+- Semaphores
+- Queues
+
+The architecture includes dedicated tasks for input control, display output, MQTT packet handling, timing, and signaling.
+![](images/control_painel_architecture.png)
+---
+
+## 📡 MQTT Communication
+
+### Topics used:
+
+- `/sys/cam/activated/` — enable/disable monitoring
+- `/sys/cam/alert/` — receive alerts
+- `/syst/cam/mode/` — change camera mode
+- `/sys/cam/alert/dis` — disable alerts
+- `/sys/pwd/` — send or update system password
+
+### JSON Packet Format:
+
+| Function                           | JSON Format                                            |
+|-----------------------------------|--------------------------------------------------------|
+| Enable/disable system             | `{ "enable_system": true/false }`                     |
+| Triggered alert                   | `{ "camera_id": x, "zone": "zone_name" }`             |
+| Set camera mode                   | `{ "cam_mode": 1 or 2 }`                              |
+| Disable alerts                    | `{ "disable": true }`                                 |
+| Update password                   | `{ "new_pwd": "12345" }`                              |
+
+> ⚠️ All packets **must be sent as strings** with **no whitespace between characters**.
+
+---
+
+## 🧪 Prototype
+
+The control panel prototype was assembled on a protoboard with all peripherals integrated and tested.
+![Version 1.0](images/prototype_v1.0.jpeg)
+---
+
+## 📄 License
+
+This project is for academic use and is free for study, development, and improvement purposes.
+
+---
