@@ -13,20 +13,19 @@
     #include "cJSON.h"
     #include "general.h"
 
+    /* Constants to reporting the MQTT actions */
     #define NETWORK_CONNECTED   BIT1
     #define MQTT_CONNECTED      BIT2
     #define MQTT_PUBLISHED      BIT3
     #define MQTT_PUBLISH_MSG    BIT4
-    #define MQTT_ALERT_RECEIVED BIT5
+    #define MQTT_DATA_RECEIVED  BIT5
     #define RECONNECT           BIT6
 
-    #define MQTT_TAG "MQTT"
-
-    void task_MQTT_Controller(void *args);
-    bool mqtt_connected(void);
-    void mqtt_event_handler_callback(esp_mqtt_event_handle_t event_data);
-    void mqtt_connection();
-    void mqtt_publish(char *topic, char *msg);
-    TaskHandle_t* get_mqttHandle();
-
-#endif //__MQTT_H
+    void           task_MQTT_Controller(void *args);
+    bool           mqtt_connected(void);
+    void           mqtt_event_handler_callback(esp_mqtt_event_handle_t event_data);
+    void           mqtt_connection();
+    uint8_t        mqtt_publish(char *topic, char *msg);
+    TaskHandle_t*  get_mqttHandle();
+    QueueHandle_t* getHandler_MQTTpackageQueue();
+#endif
