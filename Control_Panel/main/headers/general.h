@@ -1,8 +1,8 @@
 #ifndef __GENERAL_H
     #define __GENERAL_H
     /* Wifi Credentials */
-    #define WIFI_SSID "LSNET_BARRETO"
-    #define WIFI_PWD "Tuty7090"
+    #define WIFI_SSID ""
+    #define WIFI_PWD ""
 
     /* MQTT Credentials */
     #define MQTT_URI        "mqtt://test.mosquitto.org:1883" //"mqtt://broker.hivemq.com:1883"
