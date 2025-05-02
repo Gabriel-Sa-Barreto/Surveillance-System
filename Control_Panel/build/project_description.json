@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "Control_Panel",
-    "project_version":    "d97e6c8-dirty",
+    "project_version":    "6024197-dirty",
     "project_path":       "C:/Users/gabri/Documents/Esp32_projects/Projects/Surveillance-System/Control_Panel",
     "idf_path":           "C:/Users/gabri/esp32/v5.3.1/esp-idf",
     "build_dir":          "C:/Users/gabri/Documents/Esp32_projects/Projects/Surveillance-System/Control_Panel/build",

@@ -40,6 +40,17 @@ uint8_t bitmap_SCREEN_CURSOR[] = {
     0b00000000, 0b11000000
 };
 
+uint8_t bitmap_erase_SCREEN_CURSOR[] = {
+    0b00000000, 0b00000000,
+    0b00000000, 0b00000000,
+    0b00000000, 0b00000000,
+    0b00000000, 0b00000000,
+    0b00000000, 0b00000000,
+    0b00000000, 0b00000000,
+    0b00000000, 0b00000000,
+    0b00000000, 0b00000000
+};
+
 uint8_t bitmap_confirmation_symbol[] = {
     0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,
     0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b00000000,
@@ -152,29 +163,31 @@ void updateTopMenu(void)
 {
     bool wifi_status;
     bool mqtt_status;
+    bool checkConnection;
     char ptr_time[8];
     char space[18] = "         \0";
     getTime(ptr_time, sizeof(ptr_time));
     ESP_LOGI(TIMER_TAG, "Current Time: %s", ptr_time);
     strcat(space, ptr_time); // align time to right side of menu
 
-    wifi_status = wifi_isConnected();
-    mqtt_status = mqtt_connected();
-
+    wifi_status     = wifi_isConnected();
+    mqtt_status     = mqtt_connected();
+    checkConnection = !(!wifi_status || !mqtt_status);
     printText(D_PAGE_0,  space, strlen(space), false);
-    renderConectionLogo( ~(!wifi_status | !mqtt_status) );
+    renderConectionLogo( checkConnection );
 }
 
 void displayOled_task(void *args)
 {
    SemaphoreHandle_t *xSemaphore_sincWithMain_task = (SemaphoreHandle_t *) args; 
    
-   uint8_t  opcode                 = 0;
-   uint8_t  data_button_pressed    = 0;
-   uint8_t  data_screenID          = 0;
-   uint8_t  total_menuOptions      = 0;
-   uint16_t command                = 0;
-
+   uint8_t  opcode                 =  0;
+   uint8_t  data_button_pressed    =  0;
+   uint8_t  data_screenID          = -1;
+   uint8_t  total_menuOptions      =  0;
+   uint16_t command                =  0;
+   uint8_t  last_screen            = -1;
+   uint8_t  last_cursor_position   =  0;
    while(queueHandler_Alertzones == NULL)
    {
        QueueHandle_t *handler   = get_queueHandler_alert();
@@ -188,11 +201,11 @@ void displayOled_task(void *args)
         opcode = 0b0000000011 & command;
         switch (opcode)
         {
-            case CHANGE_SCREEN: 
+            case CHANGE_SCREEN:
+                last_screen            = data_screenID;
                 data_screenID          = (0b00011100 & command) >> 2;
                 data_button_pressed    = (0b01100000 & command) >> 5;
-                break; 
-            case REFRESH_TIME_AND_HOUR: break;
+                break;
             default:          
                 data_screenID          = -1;
                 data_button_pressed    =  0;
@@ -208,6 +221,7 @@ void displayOled_task(void *args)
             default:                    total_menuOptions = 0; break;
         }
 
+        last_cursor_position = cursorPosition;
         if(data_button_pressed == BUTTON_UP)
         {
             cursorPosition -= 1;
@@ -228,48 +242,69 @@ void displayOled_task(void *args)
         switch (data_screenID)
         {
             case SCREEN_INITIAL_SCREEN:
-                cleanPage_range(D_PAGE_1, D_PAGE_6);
-                title  = "    * MENU *    ";
-                text_1 = "  Enable System";
-                text_2 = "  Disable System";
-                text_3 = "  Cam Mode";
-                printText(D_PAGE_2,  title, strlen(title), false);
-                printText(D_PAGE_3, text_1, strlen(text_1), false);
-                printText(D_PAGE_4, text_2, strlen(text_2), false);
-                printText(D_PAGE_5, text_3, strlen(text_3), false);
+                if(last_screen != data_screenID)
+                {
+                    cleanPage_range(D_PAGE_1, D_PAGE_6);
+                    title  = "    * MENU *    ";
+                    text_1 = "  Enable System";
+                    text_2 = "  Disable System";
+                    text_3 = "  Cam Mode";
+                    printText(D_PAGE_2,  title, strlen(title), false);
+                    printText(D_PAGE_3, text_1, strlen(text_1), false);
+                    printText(D_PAGE_4, text_2, strlen(text_2), false);
+                    printText(D_PAGE_5, text_3, strlen(text_3), false);
+                }else // refresh only cursor's position
+                {
+                    printBitmap(0, (last_cursor_position + 3) * D_FONT_SIZE_LINE, bitmap_erase_SCREEN_CURSOR, BITMAP_SCREEN_CURSOR_COL, BITMAP_SCREEN_CURSOR_LINE, false);
+                }
                 printBitmap(0, (cursorPosition + 3) * D_FONT_SIZE_LINE, bitmap_SCREEN_CURSOR, BITMAP_SCREEN_CURSOR_COL, BITMAP_SCREEN_CURSOR_LINE, false);
                 ESP_LOGI(DISPLAY_TAG, "Initial screen rendered.");
                 xSemaphoreGive(*xSemaphore_sincWithMain_task);
                 break;
             case SCREEN_EN_SYSTEM:
             case SCREEN_DIS_SYSTEM:
-                cleanPage_range(D_PAGE_1, D_PAGE_6);
-                text_1 = "  (YES)";
-                text_2 = "  (NO)";
-                if(data_screenID == SCREEN_EN_SYSTEM)
-                    title = "*ENABLE SYSTEM*";
-                else
-                    title = "*DISABLE SYSTEM*";
-                printText(D_PAGE_2, title,  strlen(title),  false);
-                printText(D_PAGE_4, text_1, strlen(text_1), false);
-                printText(D_PAGE_5, text_2, strlen(text_2), false);
+                if(last_screen != data_screenID)
+                {
+                    cleanPage_range(D_PAGE_1, D_PAGE_6);
+                    text_1 = "  (YES)";
+                    text_2 = "  (NO)";
+                    if(data_screenID == SCREEN_EN_SYSTEM)
+                        title = "*ENABLE SYSTEM*";
+                    else
+                        title = "*DISABLE SYSTEM*";
+                    printText(D_PAGE_2, title,  strlen(title),  false);
+                    printText(D_PAGE_4, text_1, strlen(text_1), false);
+                    printText(D_PAGE_5, text_2, strlen(text_2), false);
+                }else // refresh only cursor's position
+                {
+                    if(last_cursor_position == 0)
+                        printBitmap(0, D_FONT_SIZE_LINE * D_PAGE_4, bitmap_erase_SCREEN_CURSOR, BITMAP_SCREEN_CURSOR_COL, BITMAP_SCREEN_CURSOR_LINE, false);
+                    else
+                        printBitmap(0, D_FONT_SIZE_LINE * D_PAGE_5, bitmap_erase_SCREEN_CURSOR, BITMAP_SCREEN_CURSOR_COL, BITMAP_SCREEN_CURSOR_LINE, false);
+                }
                 if(cursorPosition == 0) // option - YES
                     printBitmap(0, D_FONT_SIZE_LINE * D_PAGE_4, bitmap_SCREEN_CURSOR, BITMAP_SCREEN_CURSOR_COL, BITMAP_SCREEN_CURSOR_LINE, false);
                 else                    // option - NO            
                     printBitmap(0, D_FONT_SIZE_LINE * D_PAGE_5, bitmap_SCREEN_CURSOR, BITMAP_SCREEN_CURSOR_COL, BITMAP_SCREEN_CURSOR_LINE, false);
                 ESP_LOGI(DISPLAY_TAG, "Screen rendered.");
-                xSemaphoreGive(*xSemaphore_sincWithMain_task);         
+                xSemaphoreGive(*xSemaphore_sincWithMain_task);
                 break;
             case SCREEN_CAMERAS_MODE:
-                cleanPage_range(D_PAGE_1, D_PAGE_6);
-                title  = "  * CAM MODE *  ";
-                text_1 = "  Continuous";
-                text_2 = "  Personalized";
-                text_3 = "  <- Back";
-                printText(D_PAGE_2, title,  strlen(title),  false);
-                printText(D_PAGE_4, text_1, strlen(text_1), false);
-                printText(D_PAGE_5, text_2, strlen(text_2), false);
-                printText(D_PAGE_6, text_3, strlen(text_3), false);
+                if(last_screen != data_screenID)
+                {
+                    cleanPage_range(D_PAGE_1, D_PAGE_6);
+                    title  = "  * CAM MODE *  ";
+                    text_1 = "  Continuous";
+                    text_2 = "  Personalized";
+                    text_3 = "  <- Back";
+                    printText(D_PAGE_2, title,  strlen(title),  false);
+                    printText(D_PAGE_4, text_1, strlen(text_1), false);
+                    printText(D_PAGE_5, text_2, strlen(text_2), false);
+                    printText(D_PAGE_6, text_3, strlen(text_3), false);
+                }else // refresh only cursor's position
+                {
+                    printBitmap(0, (last_cursor_position + 4) * D_FONT_SIZE_LINE, bitmap_erase_SCREEN_CURSOR, BITMAP_SCREEN_CURSOR_COL, BITMAP_SCREEN_CURSOR_LINE, false);
+                }
                 printBitmap(0, (cursorPosition + 4) * D_FONT_SIZE_LINE, bitmap_SCREEN_CURSOR, BITMAP_SCREEN_CURSOR_COL, BITMAP_SCREEN_CURSOR_LINE, false);
                 ESP_LOGI(DISPLAY_TAG, "Cam mode screen rendered.");
                 xSemaphoreGive(*xSemaphore_sincWithMain_task);
@@ -312,6 +347,8 @@ void displayOled_task(void *args)
                         }else
                             vTaskDelay(pdMS_TO_TICKS(1000));
                     }
+                    free(matrix);
+                    free(zone);
                 }
                 break;
             case SCREEN_VALIDATE_PWD:

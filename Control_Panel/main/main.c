@@ -98,6 +98,7 @@ void app_main(void)
 	// ================================================================
 	// CONFIGURE DISPLAY
 	initOledDisplay();
+	vTaskDelay(pdMS_TO_TICKS(3000));
 	cleanScreen();
 	// ================================================================
 	// CONFIGURE WIFI
