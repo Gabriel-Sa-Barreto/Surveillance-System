@@ -9,7 +9,7 @@ OBJ_DIR = ./build
 
 # Flags de compilação
 CFLAGS = -Wall -Wextra -O2 -I$(INCLUDE_DIR)
-LDFLAGS = -lgpiod                     
+LDFLAGS = -lgpiod -DLOG_USE_COLOR -lpaho-mqtt3c -lcjson
 
 # Nome do executável
 TARGET = HM_Control

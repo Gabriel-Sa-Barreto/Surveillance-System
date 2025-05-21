@@ -1,0 +1,6 @@
+2025-05-21 09:49:05 INFO  src/app_main.c:34: Log system started successfully
+2025-05-21 09:49:05 INFO  ./include/src/controller_led_bt.c:89: Button request successfully.
+2025-05-21 09:49:05 INFO  ./include/src/controller_led_bt.c:97: Led request successfully.
+2025-05-21 09:49:05 INFO  ./include/src/MQTT.c:79: MQTT Client created successfully
+2025-05-21 09:49:06 INFO  ./include/src/MQTT.c:91: MQTT connected successfully.
+2025-05-21 09:49:06 INFO  ./include/src/MQTT.c:104: MQTT topic subscribed successfully: cam/led/control/
