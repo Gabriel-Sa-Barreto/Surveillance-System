@@ -1,5 +1,7 @@
 #include "../gpio.h"
 
+//#define ENABLE_DEBUG_MSG = y
+
 struct gpiod_line_request* gpio_request_to_output(const char  *chip_path,
                                                  unsigned int *offset,
                                                  int           num_lines,
@@ -15,14 +17,18 @@ struct gpiod_line_request* gpio_request_to_output(const char  *chip_path,
     chip = gpiod_chip_open(chip_path);
 	if (!chip)
 		return NULL;
+#ifdef ENABLE_DEBUG_MSG
     else
-        log_debug("Chip opened sucessfully.");
+        log_debug("OUTPUT: Chip opened sucessfully.");
+#endif
     
     settings = gpiod_line_settings_new();
-        if (!settings)
-            goto close_chip;
-        else
-            log_debug("Line setting created successfully.");
+    if (!settings)
+        goto close_chip;
+#ifdef ENABLE_DEBUG_MSG
+    else
+        log_debug("OUTPUT: Line setting created successfully.");
+#endif
     
     // Set Direction
     gpiod_line_settings_set_direction(settings, GPIOD_LINE_DIRECTION_OUTPUT);
@@ -30,24 +36,30 @@ struct gpiod_line_request* gpio_request_to_output(const char  *chip_path,
     line_cfg = gpiod_line_config_new();
 	if (!line_cfg)
 		goto free_settings;
+#ifdef ENABLE_DEBUG_MSG
     else
-        log_debug("Line Config successfully.");
+        log_debug("OUTPUT: Line Config successfully.");
+#endif
     
     for(int i = 0; i < num_lines; i++)
     {
         ret = gpiod_line_config_add_line_settings(line_cfg, &offset[i], 1, settings);
         if(ret)
             goto free_line_config;
+#ifdef ENABLE_DEBUG_MSG
         else
-            log_debug("Line settings added successfully.");
+            log_debug("OUTPUT: Line settings added successfully.");
+#endif
     }
 
     if(consumer) {
 		req_cfg = gpiod_request_config_new();
 		if (!req_cfg)
 			goto free_line_config;
+#ifdef ENABLE_DEBUG_MSG
         else
-            log_debug("Request config consumer successfully.");
+            log_debug("OUTPUT: Request config consumer successfully.");
+#endif
 
 		gpiod_request_config_set_consumer(req_cfg, consumer);
 	}
@@ -87,15 +99,18 @@ struct gpiod_line_request* gpio_request_to_input(const char   *chip_path,
     chip = gpiod_chip_open(chip_path);
 	if (!chip)
 		return NULL;
+#ifdef ENABLE_DEBUG_MSG
     else
-        log_debug("Chip opened sucessfully.");
+        log_debug("INPUT: Chip opened sucessfully.");
+#endif
     
     settings = gpiod_line_settings_new();
         if (!settings)
             goto close_chip;
+#ifdef ENABLE_DEBUG_MSG
         else
-            log_debug("Line setting created successfully.");
-    
+            log_debug("INPUT: Line setting created successfully.");
+#endif
     // Set Direction
     gpiod_line_settings_set_direction(settings, GPIOD_LINE_DIRECTION_INPUT);
     // Set Edge event
@@ -107,24 +122,30 @@ struct gpiod_line_request* gpio_request_to_input(const char   *chip_path,
     line_cfg = gpiod_line_config_new();
 	if (!line_cfg)
 		goto free_settings;
+#ifdef ENABLE_DEBUG_MSG
     else
-        log_debug("Line Config successfully.");
+        log_debug("INPUT: Line Config successfully.");
+#endif
     
     for(int i = 0; i < num_lines; i++)
     {
         ret = gpiod_line_config_add_line_settings(line_cfg, &offset[i], 1, settings);
         if(ret)
             goto free_line_config;
+#ifdef ENABLE_DEBUG_MSG
         else
-            log_debug("Line settings added successfully.");
+            log_debug("INPUT: Line settings added successfully.");
+#endif
     }
 
     if(consumer) {
 		req_cfg = gpiod_request_config_new();
 		if (!req_cfg)
 			goto free_line_config;
+#ifdef ENABLE_DEBUG_MSG
         else
-            log_debug("Request config consumer successfully.");
+            log_debug("INPUT: Request config consumer successfully.");
+#endif
 
 		gpiod_request_config_set_consumer(req_cfg, consumer);
 
