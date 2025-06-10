@@ -17,7 +17,7 @@ static void blinkLed_1(int sig, siginfo_t *sigInfo, void *vParam)
     if(sig == TIMER_SIG1)
     {
         led_1_status = (led_1_status == GPIOD_LINE_VALUE_INACTIVE) ? GPIOD_LINE_VALUE_ACTIVE : GPIOD_LINE_VALUE_INACTIVE;
-        gpiod_line_request_set_value(request_led, LED_1_LINE, led_1_status);
+        gpio_write(request_led, LED_1_LINE, led_1_status);
     }
 }
 
@@ -27,7 +27,7 @@ static void blinkLed_2(int sig, siginfo_t *sigInfo, void *vParam)
     if(sig == TIMER_SIG1)
     {
         led_2_status = (led_2_status == GPIOD_LINE_VALUE_INACTIVE) ? GPIOD_LINE_VALUE_ACTIVE : GPIOD_LINE_VALUE_INACTIVE;
-        gpiod_line_request_set_value(request_led, LED_2_LINE, led_2_status);
+        gpio_write(request_led, LED_2_LINE, led_2_status);
     }
 }
 
@@ -41,7 +41,7 @@ static void setLedMode(int led_line, int mode)
                 timerLed_enabled = false;
                 stop_timer(); 
             }
-            gpiod_line_request_set_value(request_led, led_line, GPIOD_LINE_VALUE_INACTIVE);
+            gpio_write(request_led, led_line, GPIOD_LINE_VALUE_INACTIVE);
             break;
         case LED_ON:
             if(timerLed_enabled)
@@ -49,7 +49,7 @@ static void setLedMode(int led_line, int mode)
                 timerLed_enabled = false;
                 stop_timer(); 
             }
-            gpiod_line_request_set_value(request_led, led_line, GPIOD_LINE_VALUE_ACTIVE);
+            gpio_write(request_led, led_line, GPIOD_LINE_VALUE_ACTIVE);
             break;
         case LED_BLINK:
             if(timerLed_enabled)

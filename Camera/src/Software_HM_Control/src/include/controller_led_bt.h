@@ -1,9 +1,9 @@
 #ifndef __CONTROLLER_LED_BT_H
     #define __CONTROLLER_LED_BT_H
 
-    #include "../include/gpio.h"
-    #include "../include/log.h"
-    #include "../include/Timer.h"
+    #include "../../../libs/gpio.h"
+    #include "../../../libs/log.h"
+    #include "../../../libs/Timer.h"
     #include <time.h>
     #include <signal.h>
     #include <stdlib.h>

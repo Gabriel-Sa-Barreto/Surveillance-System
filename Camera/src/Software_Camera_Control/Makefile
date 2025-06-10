@@ -11,7 +11,7 @@ INCLUDE_DIRS := $(LOCAL_INCLUDE_DIR) ../libs
 SRC_DIRS := $(LOCAL_SRC_DIR) src/include/src ../libs/src
 
 # Nome do executável
-TARGET := $(BUILD_DIR)/HM_Control
+TARGET := $(BUILD_DIR)/Cam_Control
 
 # Flags de compilação
 CFLAGS := -Wall -Wextra -O2 $(foreach dir,$(INCLUDE_DIRS),-I$(dir)) -DLOG_USE_COLOR

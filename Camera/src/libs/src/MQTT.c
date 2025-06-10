@@ -26,46 +26,18 @@ static void on_disconnected(void *context, char *cause)
     log_error("Connection with server was lost...");
     log_info("Trying reconnection...");
     while(MQTTClient_connect(client, &conn_opts) != MQTTCLIENT_SUCCESS)
+    {
         log_info("Waiting %ds....", MQTT_RECONNECTION_TIME);
-
+        sleep(MQTT_RECONNECTION_TIME);
+    }
     log_info("MQTT connected successfully.");
 }
 
-static int on_message(void *context, char *topicName, int topicLen, MQTTClient_message *message)
-{
-    if(strcmp(topicName, MQTT_TOPIC_LED) == 0)
-    {
-        log_info("MQTT message received: led settings");
-        int id, mode;
-        cJSON *json = cJSON_Parse((const char*) message->payload);
-        if(json == NULL)
-        {
-            const char *error_ptr = cJSON_GetErrorPtr();
-            if (error_ptr != NULL)
-                log_error("MQTT json message error: %s\n", error_ptr);
-            cJSON_Delete(json);
-        }else
-        {
-            cJSON *ledID   = cJSON_GetObjectItemCaseSensitive(json, "led_id");
-            cJSON *ledMode = cJSON_GetObjectItemCaseSensitive(json, "mode");
-            if(cJSON_IsNumber(ledID) && cJSON_IsNumber(ledMode))
-            {
-                id   = ledID->valueint;
-                mode = ledMode->valueint;
-                setLeds(id, mode);
-            }
-        }
-    }
-    MQTTClient_freeMessage(&message);
-    MQTTClient_free(topicName);
-    return 1;
-}
-
-int mqtt_init()
+int mqtt_init(int (*onMessage)(void *context, char *topicName, int topicLen, MQTTClient_message *message))
 {
     int rc = MQTTClient_create(&client, MQTT_ADDRESS, MQTT_CLIENT_ID, MQTTCLIENT_PERSISTENCE_NONE, NULL);
 
-    if(MQTTClient_setCallbacks(client, NULL, on_disconnected, on_message, NULL) != MQTTCLIENT_SUCCESS)
+    if(MQTTClient_setCallbacks(client, NULL, on_disconnected, onMessage, NULL) != MQTTCLIENT_SUCCESS)
     {
         log_error("Error to set mqtt function callback.");	
         return MQTTCLIENT_FAILURE;

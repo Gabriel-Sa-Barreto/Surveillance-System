@@ -1,0 +1,2 @@
+2025-05-29 09:36:31 INFO  src/app_main.c:29: Log system started successfully
+2025-05-29 09:37:40 INFO  src/app_main.c:29: Log system started successfully

@@ -1,6 +1,144 @@
-2025-05-21 09:49:05 INFO  src/app_main.c:34: Log system started successfully
-2025-05-21 09:49:05 INFO  ./include/src/controller_led_bt.c:89: Button request successfully.
-2025-05-21 09:49:05 INFO  ./include/src/controller_led_bt.c:97: Led request successfully.
-2025-05-21 09:49:05 INFO  ./include/src/MQTT.c:79: MQTT Client created successfully
-2025-05-21 09:49:06 INFO  ./include/src/MQTT.c:91: MQTT connected successfully.
-2025-05-21 09:49:06 INFO  ./include/src/MQTT.c:104: MQTT topic subscribed successfully: cam/led/control/
+2025-05-21 12:07:20 INFO  src/app_main.c:38: Log system started successfully
+2025-05-21 12:07:20 INFO  src/include/src/controller_led_bt.c:89: Button request successfully.
+2025-05-21 12:07:20 INFO  src/include/src/controller_led_bt.c:97: Led request successfully.
+2025-05-21 12:07:20 INFO  ../libs/src/MQTT.c:51: MQTT Client created successfully
+2025-05-21 12:07:20 INFO  ../libs/src/MQTT.c:63: MQTT connected successfully.
+2025-05-21 12:07:20 INFO  ../libs/src/MQTT.c:76: MQTT topic subscribed successfully: cam/led/control/
+2025-05-21 12:07:36 INFO  src/app_main.c:38: Log system started successfully
+2025-05-21 12:07:36 INFO  src/include/src/controller_led_bt.c:89: Button request successfully.
+2025-05-21 12:07:36 INFO  src/include/src/controller_led_bt.c:97: Led request successfully.
+2025-05-21 12:07:36 INFO  ../libs/src/MQTT.c:51: MQTT Client created successfully
+2025-05-21 12:07:37 INFO  ../libs/src/MQTT.c:63: MQTT connected successfully.
+2025-05-21 12:07:37 INFO  ../libs/src/MQTT.c:76: MQTT topic subscribed successfully: cam/led/control/
+2025-05-21 12:09:01 INFO  src/app_main.c:38: Log system started successfully
+2025-05-21 12:09:01 INFO  src/include/src/controller_led_bt.c:89: Button request successfully.
+2025-05-21 12:09:01 INFO  src/include/src/controller_led_bt.c:97: Led request successfully.
+2025-05-21 12:09:01 INFO  ../libs/src/MQTT.c:51: MQTT Client created successfully
+2025-05-21 12:09:01 INFO  ../libs/src/MQTT.c:63: MQTT connected successfully.
+2025-05-21 12:09:01 INFO  ../libs/src/MQTT.c:76: MQTT topic subscribed successfully: cam/led/control/
+2025-05-21 12:09:05 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:09:06 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:09:06 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:09:07 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:09:07 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:09:08 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:09:42 INFO  src/app_main.c:38: Log system started successfully
+2025-05-21 12:09:42 INFO  src/include/src/controller_led_bt.c:89: Button request successfully.
+2025-05-21 12:09:42 INFO  src/include/src/controller_led_bt.c:97: Led request successfully.
+2025-05-21 12:09:42 INFO  ../libs/src/MQTT.c:51: MQTT Client created successfully
+2025-05-21 12:09:42 INFO  ../libs/src/MQTT.c:63: MQTT connected successfully.
+2025-05-21 12:09:42 INFO  ../libs/src/MQTT.c:76: MQTT topic subscribed successfully: cam/led/control/
+2025-05-21 12:17:03 INFO  src/app_main.c:38: Log system started successfully
+2025-05-21 12:17:03 INFO  src/include/src/controller_led_bt.c:89: Button request successfully.
+2025-05-21 12:17:03 INFO  src/include/src/controller_led_bt.c:97: Led request successfully.
+2025-05-21 12:17:03 INFO  ../libs/src/MQTT.c:51: MQTT Client created successfully
+2025-05-21 12:17:03 INFO  ../libs/src/MQTT.c:63: MQTT connected successfully.
+2025-05-21 12:17:03 INFO  ../libs/src/MQTT.c:76: MQTT topic subscribed successfully: cam/led/control/
+2025-05-21 12:17:28 INFO  src/app_main.c:38: Log system started successfully
+2025-05-21 12:17:28 INFO  src/include/src/controller_led_bt.c:89: Button request successfully.
+2025-05-21 12:17:28 INFO  src/include/src/controller_led_bt.c:97: Led request successfully.
+2025-05-21 12:17:28 INFO  ../libs/src/MQTT.c:51: MQTT Client created successfully
+2025-05-21 12:17:28 INFO  ../libs/src/MQTT.c:63: MQTT connected successfully.
+2025-05-21 12:17:28 INFO  ../libs/src/MQTT.c:76: MQTT topic subscribed successfully: cam/led/control/
+2025-05-21 12:21:26 INFO  src/app_main.c:38: Log system started successfully
+2025-05-21 12:21:26 INFO  src/include/src/controller_led_bt.c:89: Button request successfully.
+2025-05-21 12:21:26 INFO  src/include/src/controller_led_bt.c:97: Led request successfully.
+2025-05-21 12:21:26 INFO  ../libs/src/MQTT.c:51: MQTT Client created successfully
+2025-05-21 12:21:27 INFO  ../libs/src/MQTT.c:63: MQTT connected successfully.
+2025-05-21 12:21:27 INFO  ../libs/src/MQTT.c:76: MQTT topic subscribed successfully: cam/led/control/
+2025-05-21 12:21:35 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:21:35 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:21:36 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:21:39 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:21:40 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:21:44 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:21:49 INFO  src/app_main.c:112: MQTT message received: led settings
+2025-05-21 12:21:53 INFO  src/app_main.c:112: MQTT message received: led settings
+2025-05-21 12:22:05 INFO  src/app_main.c:38: Log system started successfully
+2025-05-21 12:22:05 INFO  src/include/src/controller_led_bt.c:89: Button request successfully.
+2025-05-21 12:22:05 INFO  src/include/src/controller_led_bt.c:97: Led request successfully.
+2025-05-21 12:22:05 INFO  ../libs/src/MQTT.c:51: MQTT Client created successfully
+2025-05-21 12:22:05 INFO  ../libs/src/MQTT.c:63: MQTT connected successfully.
+2025-05-21 12:22:05 INFO  ../libs/src/MQTT.c:76: MQTT topic subscribed successfully: cam/led/control/
+2025-05-21 12:22:19 INFO  src/app_main.c:38: Log system started successfully
+2025-05-21 12:22:19 INFO  src/include/src/controller_led_bt.c:89: Button request successfully.
+2025-05-21 12:22:19 INFO  src/include/src/controller_led_bt.c:97: Led request successfully.
+2025-05-21 12:22:19 INFO  ../libs/src/MQTT.c:51: MQTT Client created successfully
+2025-05-21 12:22:19 INFO  ../libs/src/MQTT.c:63: MQTT connected successfully.
+2025-05-21 12:22:20 INFO  ../libs/src/MQTT.c:76: MQTT topic subscribed successfully: cam/led/control/
+2025-05-21 12:22:23 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:22:25 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:22:28 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:22:29 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:22:30 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:22:30 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:22:31 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:22:31 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:22:32 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:22:33 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:22:40 INFO  src/app_main.c:38: Log system started successfully
+2025-05-21 12:22:40 INFO  src/include/src/controller_led_bt.c:89: Button request successfully.
+2025-05-21 12:22:40 INFO  src/include/src/controller_led_bt.c:97: Led request successfully.
+2025-05-21 12:22:40 INFO  ../libs/src/MQTT.c:51: MQTT Client created successfully
+2025-05-21 12:22:40 INFO  ../libs/src/MQTT.c:63: MQTT connected successfully.
+2025-05-21 12:22:40 INFO  ../libs/src/MQTT.c:76: MQTT topic subscribed successfully: cam/led/control/
+2025-05-21 12:22:42 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:22:45 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:22:46 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:22:46 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:22:47 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:23:39 INFO  src/app_main.c:38: Log system started successfully
+2025-05-21 12:23:39 INFO  src/include/src/controller_led_bt.c:89: Button request successfully.
+2025-05-21 12:23:39 INFO  src/include/src/controller_led_bt.c:97: Led request successfully.
+2025-05-21 12:23:39 INFO  ../libs/src/MQTT.c:51: MQTT Client created successfully
+2025-05-21 12:23:40 INFO  ../libs/src/MQTT.c:63: MQTT connected successfully.
+2025-05-21 12:23:40 INFO  ../libs/src/MQTT.c:76: MQTT topic subscribed successfully: cam/led/control/
+2025-05-21 12:23:40 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:23:41 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:23:42 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:23:43 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:23:43 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:23:49 INFO  src/app_main.c:38: Log system started successfully
+2025-05-21 12:23:49 INFO  src/include/src/controller_led_bt.c:89: Button request successfully.
+2025-05-21 12:23:49 INFO  src/include/src/controller_led_bt.c:97: Led request successfully.
+2025-05-21 12:23:49 INFO  ../libs/src/MQTT.c:51: MQTT Client created successfully
+2025-05-21 12:23:49 INFO  ../libs/src/MQTT.c:63: MQTT connected successfully.
+2025-05-21 12:23:49 INFO  ../libs/src/MQTT.c:76: MQTT topic subscribed successfully: cam/led/control/
+2025-05-21 12:23:52 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:23:53 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:23:54 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:23:55 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:23:55 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:25:21 INFO  src/app_main.c:38: Log system started successfully
+2025-05-21 12:25:21 INFO  src/include/src/controller_led_bt.c:89: Button request successfully.
+2025-05-21 12:25:21 INFO  src/include/src/controller_led_bt.c:97: Led request successfully.
+2025-05-21 12:25:21 INFO  ../libs/src/MQTT.c:51: MQTT Client created successfully
+2025-05-21 12:25:22 INFO  ../libs/src/MQTT.c:63: MQTT connected successfully.
+2025-05-21 12:25:22 INFO  ../libs/src/MQTT.c:76: MQTT topic subscribed successfully: cam/led/control/
+2025-05-21 12:25:25 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:25:25 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:25:26 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:25:26 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:25:27 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:25:37 INFO  src/app_main.c:38: Log system started successfully
+2025-05-21 12:25:37 INFO  src/include/src/controller_led_bt.c:89: Button request successfully.
+2025-05-21 12:25:37 INFO  src/include/src/controller_led_bt.c:97: Led request successfully.
+2025-05-21 12:25:37 INFO  ../libs/src/MQTT.c:51: MQTT Client created successfully
+2025-05-21 12:25:38 INFO  ../libs/src/MQTT.c:63: MQTT connected successfully.
+2025-05-21 12:25:38 INFO  ../libs/src/MQTT.c:76: MQTT topic subscribed successfully: cam/led/control/
+2025-05-21 12:25:39 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:25:39 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:25:39 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-21 12:25:40 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-29 09:29:33 INFO  src/app_main.c:38: Log system started successfully
+2025-05-29 09:29:33 INFO  src/include/src/controller_led_bt.c:89: Button request successfully.
+2025-05-29 09:29:33 INFO  src/include/src/controller_led_bt.c:97: Led request successfully.
+2025-05-29 09:29:33 INFO  ../libs/src/MQTT.c:51: MQTT Client created successfully
+2025-05-29 09:29:34 INFO  ../libs/src/MQTT.c:63: MQTT connected successfully.
+2025-05-29 09:29:34 INFO  ../libs/src/MQTT.c:76: MQTT topic subscribed successfully: cam/led/control/
+2025-05-29 09:29:40 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-29 09:29:41 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-29 09:29:42 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-29 09:29:44 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-29 09:29:47 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-05-29 09:29:51 INFO  ../libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.

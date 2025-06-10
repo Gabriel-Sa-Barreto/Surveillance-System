@@ -1,11 +1,15 @@
-#include "../include/controller_led_bt.h"
-#include "../include/log.h"
-#include "../include/MQTT.h"
+#include "../src/include/controller_led_bt.h"
+#include "../../libs/log.h"
+#include "../../libs/MQTT.h"
+#include "MQTTClient.h"
 #include <cjson/cJSON.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <sys/stat.h>
+
+/* PROTOTYPE FUNCTIONS */
+int MQTT_on_message(void *context, char *topicName, int topicLen, MQTTClient_message *message);
 
 //#define ENABLE_DEBUG_MSG = y
 
@@ -40,7 +44,7 @@ int main()
     struct gpiod_line_request *buttons_request = getRequestBT();
     /* End settings buttons and leds ========================= */
 
-    if(mqtt_init() != MQTTCLIENT_SUCCESS)
+    if(mqtt_init(MQTT_on_message) != MQTTCLIENT_SUCCESS)
         return EXIT_FAILURE;
 
     mqtt_subscribe(MQTT_TOPIC_LED);
@@ -99,5 +103,35 @@ int main()
 
     /* End process button event triggered ======================= */
     return 0;
+}
+
+int MQTT_on_message(void *context, char *topicName, int topicLen, MQTTClient_message *message)
+{
+    if(strcmp(topicName, MQTT_TOPIC_LED) == 0)
+    {
+        log_info("MQTT message received: led settings");
+        int id, mode;
+        cJSON *json = cJSON_Parse((const char*) message->payload);
+        if(json == NULL)
+        {
+            const char *error_ptr = cJSON_GetErrorPtr();
+            if (error_ptr != NULL)
+                log_error("MQTT json message error: %s\n", error_ptr);
+            cJSON_Delete(json);
+        }else
+        {
+            cJSON *ledID   = cJSON_GetObjectItemCaseSensitive(json, "led_id");
+            cJSON *ledMode = cJSON_GetObjectItemCaseSensitive(json, "mode");
+            if(cJSON_IsNumber(ledID) && cJSON_IsNumber(ledMode))
+            {
+                id   = ledID->valueint;
+                mode = ledMode->valueint;
+                setLeds(id, mode);
+            }
+        }
+    }
+    MQTTClient_freeMessage(&message);
+    MQTTClient_free(topicName);
+    return 1;
 }
 
