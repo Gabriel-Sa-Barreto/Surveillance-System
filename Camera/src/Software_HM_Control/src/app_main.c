@@ -19,7 +19,7 @@ BT_edge_event_info edge_event_info_BT_1;
 int main()
 {
     /* Log configuration ================================= */
-    const char *log_filePath = "/home/pi/Surveillance-System/Camera/src/Software_HM_Control/log/log_HM_Control.txt";
+    const char *log_filePath = "/home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/log/log_HM_Control.txt";
     struct stat buffer;
     bool logFile_exist = stat(log_filePath, &buffer) == 0 ? true : false;
     FILE *fp           = (logFile_exist) ? fopen(log_filePath, "a") : fopen(log_filePath, "w");

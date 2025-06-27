@@ -1,0 +1,2 @@
+/usr/bin/ar qc libgpio.a "CMakeFiles/gpio.dir/home/pi/Documents/Surveillance-System/Camera/src/libs/src/gpio.c.o"
+/usr/bin/ranlib libgpio.a

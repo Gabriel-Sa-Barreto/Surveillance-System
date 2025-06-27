@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcontroller_led_bt.a CMakeFiles/controller_led_bt.dir/src/include/src/controller_led_bt.c.o
+/usr/bin/ranlib libcontroller_led_bt.a

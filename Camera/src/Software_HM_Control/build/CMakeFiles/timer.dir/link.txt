@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtimer.a "CMakeFiles/timer.dir/home/pi/Documents/Surveillance-System/Camera/src/libs/src/Timer.c.o"
+/usr/bin/ranlib libtimer.a
