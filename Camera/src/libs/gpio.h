@@ -1,5 +1,10 @@
 #ifndef __GPIO_H
     #define __GPIO_H
+
+    #ifdef __cplusplus
+    extern "C" {
+    #endif
+
     #include <gpiod.h>
     #include "string.h"
     #include "stdio.h"
@@ -24,5 +29,9 @@
     int  gpio_read(struct gpiod_line_request *request, const unsigned int offset);
     void gpio_write(struct gpiod_line_request *request, const unsigned int offset, enum gpiod_line_value value);
     void gpio_release_request(struct gpiod_line_request *request);
+    
+    #ifdef __cplusplus
+    }
+    #endif
 
     #endif

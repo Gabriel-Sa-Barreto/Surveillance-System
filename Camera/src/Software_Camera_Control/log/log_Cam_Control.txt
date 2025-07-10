@@ -1,2 +1,281 @@
-2025-05-29 09:36:31 INFO  src/app_main.c:29: Log system started successfully
-2025-05-29 09:37:40 INFO  src/app_main.c:29: Log system started successfully
+2025-06-30 15:34:22 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:29: Log system started successfully
+2025-07-01 11:17:06 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:40: Log system started successfully
+2025-07-01 11:17:06 ERROR /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:20: Error on Camera Manager initialization.
+2025-07-01 11:18:25 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:40: Log system started successfully
+2025-07-01 11:18:25 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:17: Camera Manager started succesfully.
+2025-07-01 11:18:50 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:40: Log system started successfully
+2025-07-01 11:18:50 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:17: Camera Manager started succesfully.
+2025-07-01 12:06:26 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:40: Log system started successfully
+2025-07-01 12:06:26 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:18: Camera Manager started succesfully.
+2025-07-01 12:07:33 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:40: Log system started successfully
+2025-07-01 12:07:33 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:18: Camera Manager started succesfully.
+2025-07-01 12:08:31 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:40: Log system started successfully
+2025-07-01 12:08:31 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:18: Camera Manager started succesfully.
+2025-07-01 12:28:43 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:40: Log system started successfully
+2025-07-01 12:28:43 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:18: Camera Manager started succesfully.
+2025-07-01 12:33:11 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:40: Log system started successfully
+2025-07-01 12:33:11 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:18: Camera Manager started succesfully.
+2025-07-01 12:34:23 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:40: Log system started successfully
+2025-07-01 12:34:23 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:18: Camera Manager started succesfully.
+2025-07-01 12:35:41 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:40: Log system started successfully
+2025-07-01 12:35:41 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:18: Camera Manager started succesfully.
+2025-07-01 12:38:05 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:40: Log system started successfully
+2025-07-01 12:38:05 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:18: Camera Manager started succesfully.
+2025-07-01 12:38:05 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:86: Camera configured!!
+2025-07-01 12:39:21 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:40: Log system started successfully
+2025-07-01 12:39:21 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:18: Camera Manager started succesfully.
+2025-07-01 12:39:21 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:87: Camera configured!!
+2025-07-01 12:40:54 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:40: Log system started successfully
+2025-07-01 12:40:54 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:18: Camera Manager started succesfully.
+2025-07-01 12:41:08 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:40: Log system started successfully
+2025-07-01 12:41:09 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:18: Camera Manager started succesfully.
+2025-07-01 12:41:09 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:88: Camera configured!!
+2025-07-01 12:43:47 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:40: Log system started successfully
+2025-07-01 12:43:47 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:18: Camera Manager started succesfully.
+2025-07-01 12:43:47 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:88: Camera configured!!
+2025-07-03 08:06:18 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:40: Log system started successfully
+2025-07-03 08:06:18 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:18: Camera Manager started succesfully.
+2025-07-03 08:06:18 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:87: Camera configured!!
+2025-07-03 08:10:40 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:40: Log system started successfully
+2025-07-03 08:10:40 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:18: Camera Manager started succesfully.
+2025-07-03 08:10:40 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:82: Camera configured!!
+2025-07-03 08:10:40 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:84: Released camera.
+2025-07-03 08:56:35 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:40: Log system started successfully
+2025-07-03 08:56:35 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:18: Camera Manager started succesfully.
+2025-07-03 08:56:35 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:82: Camera configured!!
+2025-07-03 08:56:35 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:86: Released camera.
+2025-07-03 09:54:49 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:40: Log system started successfully
+2025-07-03 09:54:49 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:17: Camera Manager started succesfully.
+2025-07-03 09:54:49 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:80: Camera configured!!
+2025-07-03 09:54:49 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:103: Released camera.
+2025-07-03 09:54:49 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:105: Camera Manager stopped.
+2025-07-03 10:01:21 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:40: Log system started successfully
+2025-07-03 10:01:21 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:18: Camera Manager started succesfully.
+2025-07-03 10:01:21 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:81: Camera configured!!
+2025-07-03 10:01:21 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:104: Released camera.
+2025-07-03 10:01:21 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:106: Camera Manager stopped.
+2025-07-07 11:34:40 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 11:34:40 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 11:34:40 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:80: Camera configured!!
+2025-07-07 11:35:27 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 11:35:27 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 11:35:27 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:80: Camera configured!!
+2025-07-07 11:36:47 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 11:36:47 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 11:36:47 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:80: Camera configured!!
+2025-07-07 11:36:47 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:103: Creating first requests....
+2025-07-07 12:03:00 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 12:03:00 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 12:03:00 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:80: Camera configured!!
+2025-07-07 12:03:21 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:103: Creating first requests....
+2025-07-07 12:06:00 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 12:06:00 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 12:06:00 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:80: Camera configured!!
+2025-07-07 12:06:07 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:103: Creating first requests....
+2025-07-07 12:06:21 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:122: First requests created.
+2025-07-07 12:06:57 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 12:06:57 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 12:06:57 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:80: Camera configured!!
+2025-07-07 12:06:57 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:103: Creating first requests....
+2025-07-07 12:06:57 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:122: First requests created.
+2025-07-07 12:06:57 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:148: Released camera.
+2025-07-07 12:06:57 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:150: Camera Manager stopped.
+2025-07-07 12:07:53 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 12:07:53 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 12:07:53 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:80: Camera configured!!
+2025-07-07 12:07:53 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:103: Creating first requests....
+2025-07-07 12:07:53 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:122: First requests created.
+2025-07-07 12:08:03 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:148: Released camera.
+2025-07-07 12:08:03 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:150: Camera Manager stopped.
+2025-07-07 12:09:19 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 12:09:19 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 12:09:19 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:80: Camera configured!!
+2025-07-07 12:09:19 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:103: Creating first requests....
+2025-07-07 12:09:19 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:122: First requests created.
+2025-07-07 12:09:29 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:148: Released camera.
+2025-07-07 12:09:29 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:150: Camera Manager stopped.
+2025-07-07 12:09:43 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 12:09:43 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 12:09:43 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:80: Camera configured!!
+2025-07-07 12:09:43 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:103: Creating first requests....
+2025-07-07 12:09:43 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:122: First requests created.
+2025-07-07 12:09:53 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:148: Released camera.
+2025-07-07 12:09:53 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:150: Camera Manager stopped.
+2025-07-07 12:14:38 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 12:14:38 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 12:14:38 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:80: Camera configured!!
+2025-07-07 12:14:38 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:103: Creating first requests....
+2025-07-07 12:14:38 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:122: First requests created.
+2025-07-07 12:14:48 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:148: Released camera.
+2025-07-07 12:14:48 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:150: Camera Manager stopped.
+2025-07-07 12:15:12 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 12:15:12 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 12:15:12 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:80: Camera configured!!
+2025-07-07 12:15:12 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:103: Creating first requests....
+2025-07-07 12:15:12 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:122: First requests created.
+2025-07-07 12:15:22 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:148: Released camera.
+2025-07-07 12:15:22 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:150: Camera Manager stopped.
+2025-07-07 12:15:42 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 12:15:42 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 12:15:42 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:80: Camera configured!!
+2025-07-07 12:15:42 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:103: Creating first requests....
+2025-07-07 12:15:42 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:122: First requests created.
+2025-07-07 12:15:52 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:148: Released camera.
+2025-07-07 12:15:52 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:150: Camera Manager stopped.
+2025-07-07 12:17:09 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 12:17:09 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 12:17:09 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:80: Camera configured!!
+2025-07-07 12:17:09 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:103: Creating first requests....
+2025-07-07 12:17:09 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:122: First requests created.
+2025-07-07 12:17:21 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 12:17:21 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 12:17:21 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:80: Camera configured!!
+2025-07-07 12:17:21 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:103: Creating first requests....
+2025-07-07 12:17:21 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:122: First requests created.
+2025-07-07 12:17:31 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:148: Released camera.
+2025-07-07 12:17:31 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:150: Camera Manager stopped.
+2025-07-07 12:20:20 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 12:20:20 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 12:20:20 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:80: Camera configured!!
+2025-07-07 12:20:20 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:103: Creating first requests....
+2025-07-07 12:20:20 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:122: First requests created.
+2025-07-07 12:20:30 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:148: Released camera.
+2025-07-07 12:20:30 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:150: Camera Manager stopped.
+2025-07-07 12:26:26 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 12:26:26 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 12:26:26 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:81: Camera configured!!
+2025-07-07 12:26:26 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:104: Creating first requests....
+2025-07-07 12:26:26 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:123: First requests created.
+2025-07-07 12:26:36 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:149: Released camera.
+2025-07-07 12:26:36 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:151: Camera Manager stopped.
+2025-07-07 12:27:48 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 12:27:48 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 12:27:48 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:80: Camera configured!!
+2025-07-07 12:27:48 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:103: Creating first requests....
+2025-07-07 12:27:48 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:122: First requests created.
+2025-07-07 12:27:59 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:148: Released camera.
+2025-07-07 12:27:59 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:150: Camera Manager stopped.
+2025-07-07 12:44:03 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 12:44:03 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 12:44:03 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:82: Camera configured!!
+2025-07-07 12:44:03 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:105: Creating first requests....
+2025-07-07 12:44:03 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:124: First requests created.
+2025-07-07 12:44:14 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:150: Released camera.
+2025-07-07 12:44:14 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:152: Camera Manager stopped.
+2025-07-07 12:45:36 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 12:45:36 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 12:45:36 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:82: Camera configured!!
+2025-07-07 12:45:36 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:105: Creating first requests....
+2025-07-07 12:45:36 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:124: First requests created.
+2025-07-07 12:45:46 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:150: Released camera.
+2025-07-07 12:45:46 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:152: Camera Manager stopped.
+2025-07-07 13:48:27 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 13:48:27 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 13:48:27 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:82: Camera configured!!
+2025-07-07 13:48:27 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:105: Creating first requests....
+2025-07-07 13:48:27 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:124: First requests created.
+2025-07-07 13:48:37 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:150: Released camera.
+2025-07-07 13:48:37 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:152: Camera Manager stopped.
+2025-07-07 13:53:23 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 13:53:23 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 13:53:23 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:82: Camera configured!!
+2025-07-07 13:53:23 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:105: Creating first requests....
+2025-07-07 13:53:23 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:124: First requests created.
+2025-07-07 13:54:40 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 13:54:40 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 13:54:40 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:82: Camera configured!!
+2025-07-07 13:54:40 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:105: Creating first requests....
+2025-07-07 13:54:40 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:124: First requests created.
+2025-07-07 13:57:04 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 13:57:04 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 13:57:04 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:82: Camera configured!!
+2025-07-07 13:57:04 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:105: Creating first requests....
+2025-07-07 13:57:04 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:124: First requests created.
+2025-07-07 13:57:39 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 13:57:39 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 13:57:39 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:82: Camera configured!!
+2025-07-07 13:57:39 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:105: Creating first requests....
+2025-07-07 13:57:39 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:124: First requests created.
+2025-07-07 13:59:25 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 13:59:25 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 13:59:25 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:82: Camera configured!!
+2025-07-07 13:59:25 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:105: Creating first requests....
+2025-07-07 13:59:25 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:124: First requests created.
+2025-07-07 14:00:42 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 14:00:42 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 14:00:42 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:82: Camera configured!!
+2025-07-07 14:00:42 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:105: Creating first requests....
+2025-07-07 14:00:42 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:124: First requests created.
+2025-07-07 14:01:32 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 14:01:32 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 14:01:32 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:82: Camera configured!!
+2025-07-07 14:01:32 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:105: Creating first requests....
+2025-07-07 14:01:32 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:124: First requests created.
+2025-07-07 14:03:34 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 14:03:34 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 14:03:34 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:80: Camera configured!!
+2025-07-07 14:03:34 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:103: Creating first requests....
+2025-07-07 14:03:34 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:122: First requests created.
+2025-07-07 14:03:41 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 14:03:41 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 14:03:41 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:80: Camera configured!!
+2025-07-07 14:03:41 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:103: Creating first requests....
+2025-07-07 14:03:41 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:122: First requests created.
+2025-07-07 14:03:51 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:148: Released camera.
+2025-07-07 14:03:51 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:150: Camera Manager stopped.
+2025-07-07 14:06:43 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 14:06:43 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 14:06:43 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:80: Camera configured!!
+2025-07-07 14:06:43 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:103: Creating first requests....
+2025-07-07 14:06:43 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:122: First requests created.
+2025-07-07 14:06:53 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:148: Released camera.
+2025-07-07 14:06:53 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:150: Camera Manager stopped.
+2025-07-07 14:22:57 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 14:22:57 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:19: Camera Manager started succesfully.
+2025-07-07 14:22:57 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:85: Camera configured!!
+2025-07-07 14:22:57 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:108: Creating first requests....
+2025-07-07 14:22:57 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:127: First requests created.
+2025-07-07 14:23:07 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:153: Released camera.
+2025-07-07 14:23:07 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:155: Camera Manager stopped.
+2025-07-07 14:30:27 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 14:30:27 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:20: Camera Manager started succesfully.
+2025-07-07 14:30:27 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:86: Camera configured!!
+2025-07-07 14:30:27 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:109: Creating first requests....
+2025-07-07 14:30:27 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:130: First requests created.
+2025-07-07 14:30:37 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:156: Released camera.
+2025-07-07 14:30:37 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:158: Camera Manager stopped.
+2025-07-07 14:31:02 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 14:31:02 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:20: Camera Manager started succesfully.
+2025-07-07 14:31:02 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:86: Camera configured!!
+2025-07-07 14:31:02 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:109: Creating first requests....
+2025-07-07 14:31:02 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:130: First requests created.
+2025-07-07 14:31:12 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:156: Released camera.
+2025-07-07 14:31:12 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:158: Camera Manager stopped.
+2025-07-07 14:32:56 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 14:32:56 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:20: Camera Manager started succesfully.
+2025-07-07 14:32:56 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:86: Camera configured!!
+2025-07-07 14:32:56 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:109: Creating first requests....
+2025-07-07 14:32:56 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:130: First requests created.
+2025-07-07 14:33:06 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:156: Released camera.
+2025-07-07 14:33:06 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:158: Camera Manager stopped.
+2025-07-07 14:36:32 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 14:36:32 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:20: Camera Manager started succesfully.
+2025-07-07 14:36:32 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:86: Camera configured!!
+2025-07-07 14:36:32 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:109: Creating first requests....
+2025-07-07 14:36:32 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:131: First requests created.
+2025-07-07 14:36:43 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:157: Released camera.
+2025-07-07 14:36:43 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:159: Camera Manager stopped.
+2025-07-07 14:50:09 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 14:50:09 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:20: Camera Manager started succesfully.
+2025-07-07 14:50:09 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:86: Camera configured!!
+2025-07-07 14:50:09 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:109: Creating first requests....
+2025-07-07 14:50:09 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:131: First requests created.
+2025-07-07 14:50:19 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:157: Released camera.
+2025-07-07 14:50:19 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:159: Camera Manager stopped.
+2025-07-07 14:50:25 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/app_main.cpp:41: Log system started successfully
+2025-07-07 14:50:25 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:20: Camera Manager started succesfully.
+2025-07-07 14:50:25 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:86: Camera configured!!
+2025-07-07 14:50:25 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:109: Creating first requests....
+2025-07-07 14:50:25 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:131: First requests created.
+2025-07-07 14:50:35 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:157: Released camera.
+2025-07-07 14:50:35 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/src/include/src/Manage_Camera.cpp:159: Camera Manager stopped.

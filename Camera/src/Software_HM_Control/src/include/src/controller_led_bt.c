@@ -1,4 +1,4 @@
-#include "../controller_led_bt.h"
+#include "controller_led_bt.h"
 
 enum leds_mode { LED_OFF, LED_ON, LED_BLINK};
 enum leds_ID   { LED_1 = 1, LED_2 };

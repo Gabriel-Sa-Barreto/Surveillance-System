@@ -1,6 +1,10 @@
 #ifndef __TIMER_H
     #define __TIMER_H
 
+    #ifdef __cplusplus
+    extern "C" {
+    #endif
+
     #include <stdlib.h>
     #include <signal.h>
     #include <time.h>
@@ -11,4 +15,7 @@
     void set_timer(int delay_in_miliseconds, int interval_in_miliseconds, void (*callbackFunction)(int, siginfo_t *, void *));
     void stop_timer(void);
 
+    #ifdef __cplusplus
+    }
+    #endif
 #endif

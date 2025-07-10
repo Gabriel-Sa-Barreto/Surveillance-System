@@ -32,3 +32,29 @@
 2025-06-27 11:43:35 INFO  /home/pi/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
 2025-06-27 11:43:36 INFO  /home/pi/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
 2025-06-27 11:43:37 INFO  /home/pi/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-06-30 15:12:20 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/app_main.c:38: Log system started successfully
+2025-06-30 15:12:20 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/include/src/controller_led_bt.c:89: Button request successfully.
+2025-06-30 15:12:20 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/include/src/controller_led_bt.c:97: Led request successfully.
+2025-06-30 15:12:20 INFO  /home/pi/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:51: MQTT Client created successfully
+2025-06-30 15:12:21 INFO  /home/pi/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:63: MQTT connected successfully.
+2025-06-30 15:12:21 INFO  /home/pi/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:76: MQTT topic subscribed successfully: cam/led/control/
+2025-06-30 15:12:28 INFO  /home/pi/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-06-30 15:12:29 INFO  /home/pi/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-06-30 15:12:31 INFO  /home/pi/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-06-30 15:12:34 INFO  /home/pi/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-06-30 16:01:47 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/app_main.c:42: Log system started successfully
+2025-06-30 16:01:47 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/include/src/controller_led_bt.c:89: Button request successfully.
+2025-06-30 16:01:47 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/include/src/controller_led_bt.c:97: Led request successfully.
+2025-06-30 16:01:47 INFO  /home/pi/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:51: MQTT Client created successfully
+2025-06-30 16:01:47 INFO  /home/pi/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:63: MQTT connected successfully.
+2025-06-30 16:01:47 INFO  /home/pi/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:76: MQTT topic subscribed successfully: cam/led/control/
+2025-06-30 16:01:50 INFO  /home/pi/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-06-30 16:01:51 INFO  /home/pi/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-07-01 10:15:10 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/app_main.c:42: Log system started successfully
+2025-07-01 10:15:10 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/include/src/controller_led_bt.c:89: Button request successfully.
+2025-07-01 10:15:10 INFO  /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/include/src/controller_led_bt.c:97: Led request successfully.
+2025-07-01 10:15:10 INFO  /home/pi/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:51: MQTT Client created successfully
+2025-07-01 10:15:10 INFO  /home/pi/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:63: MQTT connected successfully.
+2025-07-01 10:15:10 INFO  /home/pi/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:76: MQTT topic subscribed successfully: cam/led/control/
+2025-07-01 10:15:13 INFO  /home/pi/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2025-07-01 10:15:14 INFO  /home/pi/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.

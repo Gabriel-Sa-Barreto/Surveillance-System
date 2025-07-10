@@ -1,8 +1,8 @@
 CMakeFiles/HM_Control.dir/src/app_main.c.o: \
  /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/app_main.c \
  /usr/include/stdc-predef.h \
- /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/../src/include/controller_led_bt.h \
- /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/../src/include/../../../libs/gpio.h \
+ /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/include/controller_led_bt.h \
+ /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/../libs/gpio.h \
  /usr/local/include/gpiod.h \
  /usr/lib/gcc/aarch64-linux-gnu/12/include/stdbool.h \
  /usr/lib/gcc/aarch64-linux-gnu/12/include/stddef.h \
@@ -34,7 +34,7 @@ CMakeFiles/HM_Control.dir/src/app_main.c.o: \
  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
  /usr/include/aarch64-linux-gnu/bits/floatn.h \
  /usr/include/aarch64-linux-gnu/bits/floatn-common.h \
- /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/../src/include/../../../libs/log.h \
+ /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/../libs/log.h \
  /usr/include/time.h /usr/include/aarch64-linux-gnu/bits/time.h \
  /usr/include/aarch64-linux-gnu/bits/types/clock_t.h \
  /usr/include/aarch64-linux-gnu/bits/types/time_t.h \
@@ -45,8 +45,8 @@ CMakeFiles/HM_Control.dir/src/app_main.c.o: \
  /usr/include/aarch64-linux-gnu/bits/types/clockid_t.h \
  /usr/include/aarch64-linux-gnu/bits/types/timer_t.h \
  /usr/include/aarch64-linux-gnu/bits/types/struct_itimerspec.h \
- /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/../src/include/../../../libs/log.h \
- /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/../src/include/../../../libs/Timer.h \
+ /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/../libs/log.h \
+ /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/../libs/Timer.h \
  /usr/include/stdlib.h /usr/include/aarch64-linux-gnu/bits/waitflags.h \
  /usr/include/aarch64-linux-gnu/bits/waitstatus.h \
  /usr/include/aarch64-linux-gnu/sys/types.h /usr/include/endian.h \
@@ -100,8 +100,7 @@ CMakeFiles/HM_Control.dir/src/app_main.c.o: \
  /usr/include/aarch64-linux-gnu/bits/types/struct_sigstack.h \
  /usr/include/aarch64-linux-gnu/bits/sigthread.h \
  /usr/include/aarch64-linux-gnu/bits/signal_ext.h \
- /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/../../libs/log.h \
- /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/../../libs/MQTT.h \
+ /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/../libs/MQTT.h \
  /usr/local/include/MQTTClient.h \
  /usr/local/include/MQTTExportDeclarations.h \
  /usr/local/include/MQTTProperties.h /usr/local/include/MQTTReasonCodes.h \
@@ -113,7 +112,6 @@ CMakeFiles/HM_Control.dir/src/app_main.c.o: \
  /usr/include/aarch64-linux-gnu/bits/getopt_posix.h \
  /usr/include/aarch64-linux-gnu/bits/getopt_core.h \
  /usr/include/aarch64-linux-gnu/bits/unistd_ext.h \
- /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/../../libs/log.h \
  /usr/include/cjson/cJSON.h /usr/include/aarch64-linux-gnu/sys/stat.h \
  /usr/include/aarch64-linux-gnu/bits/stat.h \
  /usr/include/aarch64-linux-gnu/bits/struct_stat.h

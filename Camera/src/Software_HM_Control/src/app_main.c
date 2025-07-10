@@ -1,12 +1,16 @@
-#include "../src/include/controller_led_bt.h"
-#include "../../libs/log.h"
-#include "../../libs/MQTT.h"
+#include "controller_led_bt.h"
+#include "log.h"
+#include "MQTT.h"
 #include "MQTTClient.h"
 #include <cjson/cJSON.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <sys/stat.h>
+
+/* MQTT TOPICS */
+#define MQTT_TOPIC_LED "cam/led/control/"
+#define MQTT_TOPIC_BT "cam/BT/control/"
 
 /* PROTOTYPE FUNCTIONS */
 int MQTT_on_message(void *context, char *topicName, int topicLen, MQTTClient_message *message);

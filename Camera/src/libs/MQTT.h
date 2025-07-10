@@ -1,6 +1,10 @@
 #ifndef __DEFINE_MQTT_H
     #define __DEFINE_MQTT_H
 
+    #ifdef __cplusplus
+    extern "C" {
+    #endif
+
     #include "MQTTClient.h"
     #include <unistd.h>
     #include <string.h>
@@ -12,12 +16,13 @@
     #define MQTT_PASSWORD "cameraTest"
     #define MQTT_QOS 2
     #define MQTT_RECONNECTION_TIME 10
-
-    /* MQTT TOPICS */
-    #define MQTT_TOPIC_LED "cam/led/control/"
-    #define MQTT_TOPIC_BT "cam/BT/control/"
-
+    
     int mqtt_init(int (*onMessage)(void *, char *, int, MQTTClient_message *));
     int mqtt_subscribe(char *topic);
     int mqtt_publish(char *topic, char *payload, int retained);
+
+    #ifdef __cplusplus
+    }
+    #endif
+
 #endif
