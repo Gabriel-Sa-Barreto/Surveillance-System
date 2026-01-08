@@ -28,5 +28,6 @@
         "functional": "cpp",
         "esp_netif_sntp.h": "c",
         "ip_addr.h": "c"
-    }
+    },
+    "idf.port": "/dev/ttyUSB0"
 }

@@ -1,0 +1,2 @@
+source /home/gabriel/Documentos/ESP-IDF-Projects/Projects/Surveillance-System/Control_Panel/build/bootloader/gdbinit/symbols
+source /home/gabriel/Documentos/ESP-IDF-Projects/Projects/Surveillance-System/Control_Panel/build/bootloader/gdbinit/connect

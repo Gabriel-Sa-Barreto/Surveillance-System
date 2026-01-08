@@ -5,7 +5,7 @@
     #define WIFI_PWD ""
 
     /* MQTT Credentials */
-    #define MQTT_URI        "mqtt://mqtt.eclipseprojects.io:1883" //"mqtt://test.mosquitto.org:1883" //"mqtt://broker.hivemq.com:1883"
+    #define MQTT_URI        "mqtt://broker.emqx.io" //"mqtt://mqtt.eclipseprojects.io:1883" 
     #define MQTT_CLIENT_ID  "sdfwrweer52/18/2025-12:30"
     #define MQTT_username   ""
     #define MQTT_password   ""  

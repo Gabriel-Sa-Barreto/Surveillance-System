@@ -1,4 +1,4 @@
-/* * Data converted from C:/Users/gabri/Documents/Esp32_projects/Projects/Surveillance-System/Control_Panel/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from /home/gabriel/Documentos/ESP-IDF-Projects/Projects/Surveillance-System/Control_Panel/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)
