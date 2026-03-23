@@ -1,0 +1,6 @@
+/home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/build/CMakeFiles/log.dir
+/home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/build/CMakeFiles/gpio.dir
+/home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/build/CMakeFiles/mqtt.dir
+/home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/build/CMakeFiles/Get_Cam_Img.dir
+/home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/build/CMakeFiles/edit_cache.dir
+/home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/build/CMakeFiles/rebuild_cache.dir

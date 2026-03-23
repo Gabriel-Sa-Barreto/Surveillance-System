@@ -3,7 +3,7 @@
 enum leds_mode { LED_OFF, LED_ON, LED_BLINK};
 enum leds_ID   { LED_1 = 1, LED_2 };
 
-unsigned int offset_bt[NUM_BT]   = { BT_1_LINE, BT_2_LINE };
+unsigned int offset_bt[NUM_BT]   = { BT_1_LINE };
 unsigned int offset_led[NUM_LED] = { LED_1_LINE, LED_2_LINE };
 
 const char *chipPath  = "/dev/gpiochip0";

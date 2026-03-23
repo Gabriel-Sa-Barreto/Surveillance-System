@@ -20,7 +20,7 @@
     #define BT_EVENT_QUICK_PRESS "quick"
     #define BT_EVENT_LONG_PRESS "long"
 
-    #define NUM_BT 2
+    #define NUM_BT 1
     #define NUM_LED 2
     #define BT_MAX_EVENT_BUFFER 2
     #define LONG_PRESS_BUTTON_TIME 2 // 2 seconds

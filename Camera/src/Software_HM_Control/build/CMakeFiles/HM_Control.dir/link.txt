@@ -1,1 +1,1 @@
-/usr/bin/cc CMakeFiles/HM_Control.dir/src/app_main.c.o -o HM_Control  -lgpiod -lpaho-mqtt3c -lcjson liblog.a libgpio.a libmqtt.a libtimer.a libcontroller_led_bt.a libgpio.a libtimer.a 
+/usr/bin/cc CMakeFiles/HM_Control.dir/src/app_main.c.o -o HM_Control  -lgpiod -lpaho-mqtt3c -lcjson liblog.a libgpio.a libmqtt.a libtimer.a libcontroller_led_bt.a libgpio.a libtimer.a

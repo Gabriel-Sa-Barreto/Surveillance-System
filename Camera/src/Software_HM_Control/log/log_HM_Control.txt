@@ -58,3 +58,54 @@
 2025-07-01 10:15:10 INFO  /home/pi/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:76: MQTT topic subscribed successfully: cam/led/control/
 2025-07-01 10:15:13 INFO  /home/pi/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
 2025-07-01 10:15:14 INFO  /home/pi/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2026-01-13 14:50:42 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/app_main.c:42: Log system started successfully
+2026-01-13 14:50:42 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/include/src/controller_led_bt.c:89: Button request successfully.
+2026-01-13 14:50:42 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/include/src/controller_led_bt.c:97: Led request successfully.
+2026-01-13 14:50:42 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:51: MQTT Client created successfully
+2026-01-13 14:50:42 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:63: MQTT connected successfully.
+2026-01-13 14:50:42 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:76: MQTT topic subscribed successfully: cam/led/control/
+2026-01-13 14:50:49 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2026-01-13 14:50:52 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2026-01-13 14:50:58 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2026-01-13 14:51:56 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2026-01-13 14:51:57 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2026-01-13 14:56:27 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/app_main.c:42: Log system started successfully
+2026-01-13 14:56:27 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/include/src/controller_led_bt.c:89: Button request successfully.
+2026-01-13 14:56:27 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/include/src/controller_led_bt.c:97: Led request successfully.
+2026-01-13 14:56:27 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:51: MQTT Client created successfully
+2026-01-13 14:56:28 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:63: MQTT connected successfully.
+2026-01-13 14:56:29 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:76: MQTT topic subscribed successfully: cam/led/control/
+2026-01-13 14:56:41 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2026-01-13 14:56:44 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2026-01-13 14:56:45 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2026-01-13 14:56:49 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2026-01-13 14:56:53 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2026-01-13 14:56:56 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2026-01-13 14:58:16 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2026-01-13 14:59:36 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/app_main.c:116: MQTT message received: led settings
+2026-01-13 14:59:55 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/app_main.c:116: MQTT message received: led settings
+2026-01-13 15:00:09 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/app_main.c:116: MQTT message received: led settings
+2026-01-13 15:00:09 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/Timer.c:40: Timer started.
+2026-01-13 15:00:21 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2026-01-13 15:00:25 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2026-01-13 15:00:28 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/BT/control/) successfully.
+2026-01-13 15:00:40 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/app_main.c:116: MQTT message received: led settings
+2026-01-13 15:00:40 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/Timer.c:40: Timer started.
+2026-01-13 15:00:52 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/app_main.c:116: MQTT message received: led settings
+2026-01-13 15:00:52 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/Timer.c:40: Timer started.
+2026-01-13 15:01:00 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/app_main.c:116: MQTT message received: led settings
+2026-01-13 15:01:06 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/app_main.c:116: MQTT message received: led settings
+2026-01-13 15:01:18 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/app_main.c:116: MQTT message received: led settings
+2026-01-13 15:01:18 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/Timer.c:40: Timer started.
+2026-01-13 15:01:29 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/app_main.c:116: MQTT message received: led settings
+2026-01-13 15:01:29 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/Timer.c:40: Timer started.
+2026-01-13 15:01:43 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/app_main.c:116: MQTT message received: led settings
+2026-01-13 15:01:43 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/Timer.c:40: Timer started.
+2026-01-13 15:01:53 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/app_main.c:116: MQTT message received: led settings
+2026-01-13 15:01:53 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/Timer.c:40: Timer started.
+2026-01-13 15:02:01 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/app_main.c:116: MQTT message received: led settings
+2026-01-13 15:02:01 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/Timer.c:40: Timer started.
+2026-01-13 15:02:13 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/app_main.c:116: MQTT message received: led settings
+2026-01-13 15:02:19 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/app_main.c:116: MQTT message received: led settings
+2026-01-13 15:02:30 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/app_main.c:116: MQTT message received: led settings
+2026-01-13 15:02:38 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/app_main.c:116: MQTT message received: led settings

@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblog.a "CMakeFiles/log.dir/home/pi/Documents/Surveillance-System/Camera/src/libs/src/log.c.o"
-/usr/bin/ranlib liblog.a

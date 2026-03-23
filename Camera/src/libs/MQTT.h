@@ -10,10 +10,10 @@
     #include <string.h>
     #include "log.h"
     
-    #define MQTT_ADDRESS "mqtt://raspberrypi.local:1883" // "mqtt://mqtt.eclipseprojects.io:1883"
+    #define MQTT_ADDRESS "mqtt://broker.emqx.io:1883" //"mqtt://raspberrypi.local:1883" // "mqtt://mqtt.eclipseprojects.io:1883"
     #define MQTT_CLIENT_ID "dfaaerer1546546:16:39-19-05-25"
-    #define MQTT_USERNAME "camera"
-    #define MQTT_PASSWORD "cameraTest"
+    #define MQTT_USERNAME "RaspCam_1"
+    #define MQTT_PASSWORD "RaspCam_1"
     #define MQTT_QOS 2
     #define MQTT_RECONNECTION_TIME 10
     

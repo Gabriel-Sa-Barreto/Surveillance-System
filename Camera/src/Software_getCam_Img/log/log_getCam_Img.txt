@@ -1,0 +1,131 @@
+2026-03-23 16:02:46 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:42: Log system started successfully
+2026-03-23 16:02:46 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:51: MQTT Client created successfully
+2026-03-23 16:02:47 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:63: MQTT connected successfully.
+2026-03-23 16:02:48 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:48 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:48 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:49 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:49 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:50 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:50 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:51 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:51 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:52 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:52 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:53 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:53 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:53 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:54 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:54 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:55 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:56 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:56 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:57 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:57 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:58 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:58 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:58 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:59 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:02:59 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:00 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:00 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:01 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:41 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:42: Log system started successfully
+2026-03-23 16:03:41 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:51: MQTT Client created successfully
+2026-03-23 16:03:42 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:63: MQTT connected successfully.
+2026-03-23 16:03:42 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:42 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:43 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:43 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:43 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:43 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:44 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:44 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:44 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:45 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:45 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:45 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:46 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:46 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:46 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:47 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:47 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:47 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:47 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:48 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:48 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:48 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:49 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:49 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:49 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:50 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:50 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:50 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:51 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:51 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:51 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:51 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:52 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:52 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:53 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:53 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:53 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:54 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:54 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:54 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:55 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:55 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:55 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:56 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:56 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:56 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:57 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:57 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:57 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:03:58 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:05:54 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:42: Log system started successfully
+2026-03-23 16:05:54 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:51: MQTT Client created successfully
+2026-03-23 16:05:55 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:63: MQTT connected successfully.
+2026-03-23 16:05:55 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:05:56 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:05:56 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:05:57 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:05:58 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:05:58 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:05:59 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:05:59 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:06:00 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:06:00 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:06:01 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:06:01 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:06:02 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:06:02 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:08:23 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:42: Log system started successfully
+2026-03-23 16:08:23 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:51: MQTT Client created successfully
+2026-03-23 16:08:24 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:63: MQTT connected successfully.
+2026-03-23 16:08:24 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:08:25 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:08:25 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:08:25 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:08:26 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:08:26 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:08:27 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:08:27 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:08:28 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:08:28 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:11:03 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:42: Log system started successfully
+2026-03-23 16:11:04 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:56: Camera opened successfully!!
+2026-03-23 16:11:04 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:51: MQTT Client created successfully
+2026-03-23 16:11:04 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:63: MQTT connected successfully.
+2026-03-23 16:11:04 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:11:05 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:11:05 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:11:05 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:11:05 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:11:06 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:11:06 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:11:06 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:11:07 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:11:07 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:11:07 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.
+2026-03-23 16:11:08 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:88: Message published on topic (cam/img/) successfully.

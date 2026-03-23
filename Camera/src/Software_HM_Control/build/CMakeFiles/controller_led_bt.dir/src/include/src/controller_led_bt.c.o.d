@@ -1,8 +1,8 @@
 CMakeFiles/controller_led_bt.dir/src/include/src/controller_led_bt.c.o: \
- /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/include/src/controller_led_bt.c \
+ /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/include/src/controller_led_bt.c \
  /usr/include/stdc-predef.h \
- /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/include/controller_led_bt.h \
- /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/../libs/gpio.h \
+ /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/src/include/controller_led_bt.h \
+ /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/../libs/gpio.h \
  /usr/local/include/gpiod.h \
  /usr/lib/gcc/aarch64-linux-gnu/12/include/stdbool.h \
  /usr/lib/gcc/aarch64-linux-gnu/12/include/stddef.h \
@@ -34,7 +34,7 @@ CMakeFiles/controller_led_bt.dir/src/include/src/controller_led_bt.c.o: \
  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
  /usr/include/aarch64-linux-gnu/bits/floatn.h \
  /usr/include/aarch64-linux-gnu/bits/floatn-common.h \
- /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/../libs/log.h \
+ /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/../libs/log.h \
  /usr/include/time.h /usr/include/aarch64-linux-gnu/bits/time.h \
  /usr/include/aarch64-linux-gnu/bits/types/clock_t.h \
  /usr/include/aarch64-linux-gnu/bits/types/time_t.h \
@@ -45,8 +45,8 @@ CMakeFiles/controller_led_bt.dir/src/include/src/controller_led_bt.c.o: \
  /usr/include/aarch64-linux-gnu/bits/types/clockid_t.h \
  /usr/include/aarch64-linux-gnu/bits/types/timer_t.h \
  /usr/include/aarch64-linux-gnu/bits/types/struct_itimerspec.h \
- /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/../libs/log.h \
- /home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/../libs/Timer.h \
+ /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/../libs/log.h \
+ /home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/../libs/Timer.h \
  /usr/include/stdlib.h /usr/include/aarch64-linux-gnu/bits/waitflags.h \
  /usr/include/aarch64-linux-gnu/bits/waitstatus.h \
  /usr/include/aarch64-linux-gnu/sys/types.h /usr/include/endian.h \

@@ -1,7 +1,0 @@
-/home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/build/CMakeFiles/log.dir
-/home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/build/CMakeFiles/gpio.dir
-/home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/build/CMakeFiles/mqtt.dir
-/home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/build/CMakeFiles/manageCam.dir
-/home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/build/CMakeFiles/Cam_Control.dir
-/home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/build/CMakeFiles/edit_cache.dir
-/home/pi/Documents/Surveillance-System/Camera/src/Software_Camera_Control/build/CMakeFiles/rebuild_cache.dir

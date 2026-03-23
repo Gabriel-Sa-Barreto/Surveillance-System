@@ -1,2 +1,0 @@
-/usr/bin/ar qc libmanageCam.a CMakeFiles/manageCam.dir/src/include/src/Manage_Camera.cpp.o
-/usr/bin/ranlib libmanageCam.a

@@ -1,8 +1,8 @@
-/home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/build/CMakeFiles/log.dir
-/home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/build/CMakeFiles/gpio.dir
-/home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/build/CMakeFiles/mqtt.dir
-/home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/build/CMakeFiles/timer.dir
-/home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/build/CMakeFiles/HM_Control.dir
-/home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/build/CMakeFiles/controller_led_bt.dir
-/home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/build/CMakeFiles/edit_cache.dir
-/home/pi/Documents/Surveillance-System/Camera/src/Software_HM_Control/build/CMakeFiles/rebuild_cache.dir
+/home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/build/CMakeFiles/log.dir
+/home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/build/CMakeFiles/gpio.dir
+/home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/build/CMakeFiles/mqtt.dir
+/home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/build/CMakeFiles/timer.dir
+/home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/build/CMakeFiles/HM_Control.dir
+/home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/build/CMakeFiles/controller_led_bt.dir
+/home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/build/CMakeFiles/edit_cache.dir
+/home/gabriel/Documents/Surveillance-System/Camera/src/Software_HM_Control/build/CMakeFiles/rebuild_cache.dir
