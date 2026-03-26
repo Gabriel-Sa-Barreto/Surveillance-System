@@ -3,6 +3,8 @@
 MQTTClient client;
 MQTTClient_connectOptions conn_opts = MQTTClient_connectOptions_initializer;
 
+static bool show_msg_debug = false;
+
 static char* mqtt_error_code(int code)
 {
     switch(code)
@@ -77,14 +79,23 @@ int mqtt_subscribe(char *topic)
     return MQTTCLIENT_SUCCESS;
 }
 
-int mqtt_publish(char *topic, char *payload, int retained)
+int mqtt_publish(char *topic, char *payload, int payload_length, int retained)
 {
-    int rc = MQTTClient_publish(client, topic, strlen(payload), (void*)payload, MQTT_QOS, retained, NULL);	
+    int rc = MQTTClient_publish(client, topic, payload_length, (void*)payload, MQTT_QOS, retained, NULL);	
     if(rc != MQTTCLIENT_SUCCESS)
     {
-        log_error("Error to publish message on mqtt topic : %s. Error: %s (%d)", topic, mqtt_error_code(rc), rc);
+        if(show_msg_debug)
+            log_error("Error to publish message on mqtt topic : %s. Error: %s (%d)", topic, mqtt_error_code(rc), rc);
         return MQTTCLIENT_FAILURE;
     }else
-        log_info("Message published on topic (%s) successfully.", topic);
+    {
+        if(show_msg_debug)
+            log_info("Message published on topic (%s) successfully.", topic);
+    }
     return MQTTCLIENT_SUCCESS;
+}
+
+void set_mqtt_msg_debug(bool set_msg)
+{
+    show_msg_debug = set_msg;
 }

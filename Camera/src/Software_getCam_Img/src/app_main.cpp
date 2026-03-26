@@ -59,6 +59,8 @@ int main()
     if(mqtt_init(MQTT_on_message) != MQTTCLIENT_SUCCESS)
         return EXIT_FAILURE;
 
+    set_mqtt_msg_debug(false);
+
     cv::Mat frame;
     vector<uchar> cv_buffer;
     vector<int> params = {cv::IMWRITE_JPEG_QUALITY, 70}; // Aggressive compression for performance.
@@ -73,13 +75,11 @@ int main()
             break;
         }
 
-        cv::imshow("Captured Image", frame);
+        //cv::imshow("Captured Image", frame);
         // Compresses to reduce the MQTT payload.
-         cv::imencode(".jpg", frame, cv_buffer, params);
-
+        cv::imencode(".jpg", frame, cv_buffer, params);
         // Publish the binary buffer.
-        mqtt_publish(MQTT_TOPIC_SEND_IMAGE, (char*) cv_buffer.data(), false);
-
+        mqtt_publish(MQTT_TOPIC_SEND_IMAGE, (char*) cv_buffer.data(), cv_buffer.size(), false);
         // Delay to maintain in 10 FPS.
         cv::waitKey(100); 
     }
