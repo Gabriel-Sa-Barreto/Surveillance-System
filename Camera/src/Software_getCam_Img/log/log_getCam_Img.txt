@@ -666,3 +666,65 @@
 2026-03-26 17:35:07 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:56: Camera opened successfully!!
 2026-03-26 17:35:07 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:53: MQTT Client created successfully
 2026-03-26 17:35:07 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:65: MQTT connected successfully.
+2026-03-27 14:42:30 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:42: Log system started successfully
+2026-03-27 14:42:31 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:56: Camera opened successfully!!
+2026-03-27 14:42:31 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:53: MQTT Client created successfully
+2026-03-27 14:42:32 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:65: MQTT connected successfully.
+2026-03-27 15:08:56 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:42: Log system started successfully
+2026-03-27 15:08:56 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:56: Camera opened successfully!!
+2026-03-27 15:08:56 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:53: MQTT Client created successfully
+2026-03-27 15:08:57 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:65: MQTT connected successfully.
+2026-03-27 15:11:51 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:42: Log system started successfully
+2026-03-27 15:11:52 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:56: Camera opened successfully!!
+2026-03-27 15:11:52 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:53: MQTT Client created successfully
+2026-03-27 15:11:52 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:65: MQTT connected successfully.
+2026-03-27 15:27:20 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:42: Log system started successfully
+2026-03-27 15:27:20 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:56: Camera opened successfully!!
+2026-03-27 15:27:20 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:53: MQTT Client created successfully
+2026-03-27 15:27:21 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:65: MQTT connected successfully.
+2026-03-27 15:30:39 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:42: Log system started successfully
+2026-03-27 15:30:39 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:56: Camera opened successfully!!
+2026-03-27 15:30:39 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:53: MQTT Client created successfully
+2026-03-27 15:30:40 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:65: MQTT connected successfully.
+2026-03-27 15:38:12 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:42: Log system started successfully
+2026-03-27 15:38:12 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:56: Camera opened successfully!!
+2026-03-27 15:38:12 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:53: MQTT Client created successfully
+2026-03-27 15:38:13 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:65: MQTT connected successfully.
+2026-03-27 15:39:46 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:42: Log system started successfully
+2026-03-27 15:39:47 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:56: Camera opened successfully!!
+2026-03-27 15:39:47 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:53: MQTT Client created successfully
+2026-03-27 15:39:47 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:65: MQTT connected successfully.
+2026-03-27 15:44:02 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:42: Log system started successfully
+2026-03-27 15:44:02 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:56: Camera opened successfully!!
+2026-03-27 15:44:02 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:53: MQTT Client created successfully
+2026-03-27 15:44:03 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:65: MQTT connected successfully.
+2026-03-27 16:05:39 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:42: Log system started successfully
+2026-03-27 16:05:39 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:56: Camera opened successfully!!
+2026-03-27 16:05:39 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:53: MQTT Client created successfully
+2026-03-27 16:05:39 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:65: MQTT connected successfully.
+2026-03-27 16:18:34 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:42: Log system started successfully
+2026-03-27 16:18:34 ERROR /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:50: Error to open camera
+2026-03-27 16:18:58 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:42: Log system started successfully
+2026-03-27 16:18:58 ERROR /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:50: Error to open camera
+2026-03-27 16:19:24 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:42: Log system started successfully
+2026-03-27 16:19:24 ERROR /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:50: Error to open camera
+2026-03-27 16:20:01 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:42: Log system started successfully
+2026-03-27 16:20:01 ERROR /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:50: Error to open camera
+2026-03-27 16:20:16 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:42: Log system started successfully
+2026-03-27 16:20:16 ERROR /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:50: Error to open camera
+2026-03-27 16:22:56 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:42: Log system started successfully
+2026-03-27 16:22:57 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:56: Camera opened successfully!!
+2026-03-27 16:22:57 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:53: MQTT Client created successfully
+2026-03-27 16:22:57 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:65: MQTT connected successfully.
+2026-03-27 16:23:36 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:42: Log system started successfully
+2026-03-27 16:23:36 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:56: Camera opened successfully!!
+2026-03-27 16:23:36 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:53: MQTT Client created successfully
+2026-03-27 16:23:36 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:65: MQTT connected successfully.
+2026-03-27 16:23:55 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:42: Log system started successfully
+2026-03-27 16:23:55 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:56: Camera opened successfully!!
+2026-03-27 16:23:55 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:53: MQTT Client created successfully
+2026-03-27 16:23:56 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:65: MQTT connected successfully.
+2026-03-27 16:24:15 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:42: Log system started successfully
+2026-03-27 16:24:15 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/Software_getCam_Img/src/app_main.cpp:56: Camera opened successfully!!
+2026-03-27 16:24:15 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:53: MQTT Client created successfully
+2026-03-27 16:24:15 INFO  /home/gabriel/Documents/Surveillance-System/Camera/src/libs/src/MQTT.c:65: MQTT connected successfully.
